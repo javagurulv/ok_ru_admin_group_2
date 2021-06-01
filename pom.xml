@@ -2,8 +2,8 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.javaguru.java1</groupId>
-    <artifactId>java1</artifactId>
+    <groupId>ru.ok.java.introduction</groupId>
+    <artifactId>java_ok_ru</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>JavaGuru Java OK RU course</description>
     <properties>
