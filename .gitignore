@@ -6,7 +6,7 @@
 /.idea/
 /idea/
 
-#### IntelliJ IDEA out folder (compilation folder) ####
+#### Compilation output folders ####
 /.out/
 /out/
-target/
+/target/
