@@ -5,7 +5,7 @@
     <groupId>com.javaguru.java1</groupId>
     <artifactId>java1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>JavaGuru Java 1 course</description>
+    <description>JavaGuru Java OK RU course</description>
     <properties>
         <java.version>1.14</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
