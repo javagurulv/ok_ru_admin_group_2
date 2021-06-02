@@ -10,11 +10,11 @@ public class Calculate {
                 return Multiplication.multiply(values);
             }
             case "subtract" -> {
-                System.out.println("Only first two values will be operated on!");
+                System.out.println("Only the first two values will be used!");
                 return Subtraction.subtract(values[0], values[1]);
             }
             case "divide" -> {
-                System.out.println("Only first two values will be operated on!");
+                System.out.println("Only the first two values will be used!");
                 return Division.divide(values[0], values[1]);
             }
             default -> {
@@ -31,7 +31,7 @@ public class Calculate {
         if (args.length >= 3) {
             action = args[0];
             values = new double[args.length - 1];
-            for (int a = 1; a < args.length; a++) values[a-1] = Integer.parseInt(args[a]);
+            for (int a = 1; a < args.length; a++) values[a-1] = Double.parseDouble(args[a]);
         } else {
             action = "add";
             values = new double[]{1, 2};
