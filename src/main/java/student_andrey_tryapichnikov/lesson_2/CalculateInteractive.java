@@ -1,5 +1,4 @@
 package student_andrey_tryapichnikov.lesson_2;
-import student_andrey_tryapichnikov.lesson_1.*;
 import java.util.Scanner;
 
 public class CalculateInteractive {
@@ -26,17 +25,17 @@ public class CalculateInteractive {
         double value2 = scanner.nextInt();
         double[] values = {value1, value2};
         switch (action) {
-            case "add" -> result = Addition.add(values);
-            case "sub" -> result = Subtraction.subtract(value1, value2);
-            case "mul" -> result = Multiplication.multiply(values);
-            case "div" -> result = Division.divide(value1, value2);
-            /* Since the default behaviour for the homework program to print out results for all operations, make a
+            case "add" -> result = student_andrey_tryapichnikov.lesson_1.Addition.add(values);
+            case "sub" -> result = student_andrey_tryapichnikov.lesson_1.Subtraction.subtract(value1, value2);
+            case "mul" -> result = student_andrey_tryapichnikov.lesson_1.Multiplication.multiply(values);
+            case "div" -> result = student_andrey_tryapichnikov.lesson_1.Division.divide(value1, value2);
+            /* Since the default behaviour for the homework program is to print out results for all operations, make a
                specific option that does exactly that. It's a bit sad that we can't make it more versatile. */
             case "all" -> {
-                results[0] = Addition.add(values);
-                results[1] = Subtraction.subtract(value1, value2);
-                results[2] = Multiplication.multiply(values);
-                results[3] = Division.divide(value1, value2);
+                results[0] = student_andrey_tryapichnikov.lesson_1.Addition.add(values);
+                results[1] = student_andrey_tryapichnikov.lesson_1.Subtraction.subtract(value1, value2);
+                results[2] = student_andrey_tryapichnikov.lesson_1.Multiplication.multiply(values);
+                results[3] = student_andrey_tryapichnikov.lesson_1.Division.divide(value1, value2);
             }
         }
         if (action.equals("all")) {
