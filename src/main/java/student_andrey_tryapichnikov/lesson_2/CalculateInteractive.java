@@ -37,8 +37,8 @@ public class CalculateInteractive {
 
         System.out.println("Enter two numbers:");
         double[] values = new double[2];
-        values[0] = scanner.nextInt();
-        values[1] = scanner.nextInt();
+        values[0] = scanner.nextDouble();
+        values[1] = scanner.nextDouble();
 
         if (operation.equals("all")) {
             for (String available_operation : OPERATIONS) {
