@@ -1,50 +1,51 @@
 package student_andrey_tryapichnikov.lesson_2;
+import student_andrey_tryapichnikov.lesson_1.Addition;
+import student_andrey_tryapichnikov.lesson_1.Division;
+import student_andrey_tryapichnikov.lesson_1.Multiplication;
+import student_andrey_tryapichnikov.lesson_1.Subtraction;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CalculateInteractive {
-    private static boolean contains(String[] input, String matchValue) {
-        // A very simple function to test for value presence in an array.
-        for (String a : input) if (a.equals(matchValue)) return true;
+    static final String RESULT_FMT = "%s result: %s\n";
+    static final String[] OPERATIONS = {"add", "sub", "mul", "div", "all"};
+
+    static boolean is_valid_operation(String matchValue) {
+        for (String operation : OPERATIONS) if (operation.equals(matchValue)) return true;
         return false;
     }
 
-    public static void main(String[] args) {
-        double result = 0;
-        double[] results = new double[4];
-        String[] actions = {"add", "sub", "mul", "div", "all"};
+    private static void print_result(String operation, double[] values) {
+        switch (operation) {
+            case "add" -> System.out.printf(RESULT_FMT, operation, Addition.add(values));
+            case "sub" -> System.out.printf(RESULT_FMT, operation, Subtraction.subtract(values[0], values[1]));
+            case "mul" -> System.out.printf(RESULT_FMT, operation, Multiplication.multiply(values));
+            case "div" -> System.out.printf(RESULT_FMT, operation, Division.divide(values[0], values[1]));
+        }
+    }
 
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Action? (add, sub, mul, div, all)");
-        String action = scanner.nextLine();
-        if (! contains(actions, action)) {
-            System.err.println("Unsupported action!");
+
+        System.out.printf("Operation? %s\n", Arrays.stream(OPERATIONS).toList());
+        String operation = scanner.nextLine();
+        if (! is_valid_operation(operation)) {
+            System.err.println("Unsupported operation!");
             System.exit(1);
         }
+
         System.out.println("Enter two numbers:");
-        double value1 = scanner.nextInt();
-        double value2 = scanner.nextInt();
-        double[] values = {value1, value2};
-        switch (action) {
-            case "add" -> result = student_andrey_tryapichnikov.lesson_1.Addition.add(values);
-            case "sub" -> result = student_andrey_tryapichnikov.lesson_1.Subtraction.subtract(value1, value2);
-            case "mul" -> result = student_andrey_tryapichnikov.lesson_1.Multiplication.multiply(values);
-            case "div" -> result = student_andrey_tryapichnikov.lesson_1.Division.divide(value1, value2);
-            /* Since the default behaviour for the homework program is to print out results for all operations, make a
-               specific option that does exactly that. It's a bit sad that we can't make it more versatile. */
-            case "all" -> {
-                results[0] = student_andrey_tryapichnikov.lesson_1.Addition.add(values);
-                results[1] = student_andrey_tryapichnikov.lesson_1.Subtraction.subtract(value1, value2);
-                results[2] = student_andrey_tryapichnikov.lesson_1.Multiplication.multiply(values);
-                results[3] = student_andrey_tryapichnikov.lesson_1.Division.divide(value1, value2);
-            }
-        }
-        if (action.equals("all")) {
-            for (int a = 0; a < results.length; a++) {
-                System.out.printf("%s result: %s\n", actions[a], results[a]);
+        double[] values = new double[2];
+        values[0] = scanner.nextInt();
+        values[1] = scanner.nextInt();
+
+        if (operation.equals("all")) {
+            for (String available_operation : OPERATIONS) {
+                print_result(available_operation, values);
             }
         } else {
-            // somehow IDE warns about result not being initialized even with default in switch statement, weird
-            System.out.printf("Result: %s\n", result);
+            print_result(operation, values);
         }
     }
 }
