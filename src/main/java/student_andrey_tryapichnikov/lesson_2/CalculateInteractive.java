@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class CalculateInteractive {
-    static final String RESULT_FMT = "%s result: %s\n";
+    static final String RESULT_FMT = "%s equals: %s\n";
     static final String[] OPERATIONS = {"add", "sub", "mul", "div", "all"};
 
     static boolean is_valid_operation(String matchValue) {
@@ -18,10 +18,10 @@ public class CalculateInteractive {
 
     private static void print_result(String operation, double[] values) {
         switch (operation) {
-            case "add" -> System.out.printf(RESULT_FMT, operation, Addition.add(values));
-            case "sub" -> System.out.printf(RESULT_FMT, operation, Subtraction.subtract(values[0], values[1]));
-            case "mul" -> System.out.printf(RESULT_FMT, operation, Multiplication.multiply(values));
-            case "div" -> System.out.printf(RESULT_FMT, operation, Division.divide(values[0], values[1]));
+            case "add" -> System.out.printf(RESULT_FMT, "Sum", Addition.add(values));
+            case "sub" -> System.out.printf(RESULT_FMT, "Difference", Subtraction.subtract(values[0], values[1]));
+            case "mul" -> System.out.printf(RESULT_FMT, "Product", Multiplication.multiply(values));
+            case "div" -> System.out.printf(RESULT_FMT, "Quotient", Division.divide(values[0], values[1]));
         }
     }
 
