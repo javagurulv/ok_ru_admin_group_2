@@ -1,4 +1,4 @@
-package student_andrey_tryapichnikov.lesson_2;
+package student_andrey_tryapichnikov.lesson_2.level_1;
 import student_andrey_tryapichnikov.lesson_1.Addition;
 import student_andrey_tryapichnikov.lesson_1.Division;
 import student_andrey_tryapichnikov.lesson_1.Multiplication;
