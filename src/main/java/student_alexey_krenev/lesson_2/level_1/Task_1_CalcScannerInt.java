@@ -1,8 +1,8 @@
-package student_alexey_krenev.lesson_2_variables;
+package student_alexey_krenev.lesson_2.level_1;
 
 import java.util.Scanner;
 
-public class Task_11_Average {
+public class Task_1_CalcScannerInt {
     public static void main(String[] args) {
         System.out.println("Insert first int:");
         Scanner scanner1 = new Scanner(System.in);
@@ -12,13 +12,7 @@ public class Task_11_Average {
         Scanner scanner2 = new Scanner(System.in);
         int secondNumber = scanner2.nextInt();
 
-        System.out.println("Insert third int:");
-        Scanner scanner3 = new Scanner(System.in);
-        int thirdNumber = scanner3.nextInt();
+        System.out.println(firstNumber+secondNumber);
 
-        float sum = firstNumber + secondNumber + thirdNumber;
-
-
-        System.out.println("Average is:"+sum/3);
     }
 }

@@ -1,4 +1,4 @@
-package student_alexey_krenev.lesson_2_variables;
+package student_alexey_krenev.lesson_2.level_5;
 
 public class Task15_Print {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package student_alexey_krenev.lesson_1.calc;
+package student_alexey_krenev.lesson_1.level_4;
 
 public class CalcPlus {
     public static void main(String[] args) {
