@@ -32,7 +32,7 @@ public class Pen {
 
     public void write(Paper paper, String text) {
         if (inkLevelPercent - text.length() < 0) {
-            System.err.println("Not enough ink!");
+            System.out.printf("\033[31moops:\033[39m Not enough ink to write down: %s\n", text);
             return;
         }
         inkLevelPercent -= text.length();
