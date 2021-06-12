@@ -2,6 +2,7 @@ package student_andrey_tryapichnikov.lesson_3.level_7;
 
 public class Paper {
     String name;
+    String writtenText = "";
     private int size;
     private int emptyPercent;
 
@@ -25,7 +26,13 @@ public class Paper {
             System.out.printf("%s is out of space, get some new paper!\n", this.name);
             this.emptyPercent = 0;
         } else {
+            var presentText = this.writtenText;
+            this.writtenText = presentText + text;
             System.out.printf("%s%% of %s is still empty.\n", this.emptyPercent, this.name);
         }
+    }
+
+    public void read() {
+        System.out.printf("Text written on %s:\n%s\n", this.name, this.writtenText);
     }
 }

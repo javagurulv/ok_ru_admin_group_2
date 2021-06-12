@@ -36,13 +36,14 @@ public class Pen {
             return;
         }
         inkLevelPercent -= text.length();
-        System.out.printf("\n\033[%sm%s\033[39m\n\n", this.inkColorValue, text);
-        paper.write(text);
+        var writtenText = String.format("\033[%sm%s\033[39m", this.inkColorValue, text);
+        System.out.printf("Writing down the following on %s:\n%s\n", paper.name, writtenText);
+        paper.write(writtenText);
         checkInkLevel();
     }
 
     public void refill(String newInkColor) {
-        String prevMsg = String.format("Replacing %s%% of %s ink...", this.inkLevelPercent, this.inkColorName);
+        var prevMsg = String.format("Replacing %s%% of %s ink...", this.inkLevelPercent, this.inkColorName);
         this.inkLevelPercent = 100;
         setColor(newInkColor);
         String nextMsg = String.format(" with %s%% of %s ink.", this.inkLevelPercent, this.inkColorName);
