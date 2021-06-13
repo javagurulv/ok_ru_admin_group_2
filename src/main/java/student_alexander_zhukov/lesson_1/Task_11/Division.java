@@ -1,5 +1,8 @@
 package student_alexander_zhukov.lesson_1.Task_11;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Division {
     public static void main(String[] args) {
         int x = 71;
