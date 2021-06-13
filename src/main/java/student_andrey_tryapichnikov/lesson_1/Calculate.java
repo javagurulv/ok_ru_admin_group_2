@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Calculate {
     public static double calculate(String action, double[] values) {
         switch (action) {

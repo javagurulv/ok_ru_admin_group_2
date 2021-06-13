@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Multiplication {
     public static double multiply(double[] values) {
         int result = 1;
