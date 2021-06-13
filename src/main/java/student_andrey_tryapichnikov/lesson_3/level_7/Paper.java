@@ -2,7 +2,7 @@ package student_andrey_tryapichnikov.lesson_3.level_7;
 
 public class Paper {
     String name;
-    String writtenText = "";
+    private String writtenText = "";
     private int size;
     private int emptyPercent;
 

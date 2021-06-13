@@ -1,6 +1,6 @@
 package student_andrey_tryapichnikov.lesson_3.level_7;
 
-public class Demo {
+public class PenPaperDemo {
     public static void main(String[] args) {
         var sheet = new Paper("sheet1", "A3");
         sheet.cutInHalf();
