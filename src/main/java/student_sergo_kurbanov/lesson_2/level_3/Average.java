@@ -15,5 +15,10 @@ public class Average {
 
         double Average = ((double) Num1 + (double) Num2 + (double) Num3) / (double) 3;
         System.out.printf("\nThe average of %d, %d and %d is %.2f", Num1, Num2, Num3, Average);
+
+        // Using most "wide" type - will get the same result
+        double Average2 = (Num1 + Num2 + Num3) / (double) 3;
+        System.out.printf("\n                                %.2f", Average2);
+
     }
 }
