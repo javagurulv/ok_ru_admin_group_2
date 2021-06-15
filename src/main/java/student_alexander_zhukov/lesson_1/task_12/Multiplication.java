@@ -1,4 +1,4 @@
-package student_alexander_zhukov.lesson_1.Task_12;
+package student_alexander_zhukov.lesson_1.task_12;
 
 import teacher.codereview.CodeReview;
 
