@@ -19,6 +19,5 @@ public class Average {
         // Using most "wide" type - will get the same result
         double Average2 = (Num1 + Num2 + Num3) / (double) 3;
         System.out.printf("\n                                %.2f", Average2);
-
     }
 }
