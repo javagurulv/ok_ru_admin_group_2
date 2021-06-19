@@ -7,13 +7,13 @@ public class Circle {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the radius: ");
-        double Radius = scanner.nextDouble();
+        double radius = scanner.nextDouble();
 
-        double Perimeter = 2 * Math.PI * Radius;
-        double Area = Math.PI * Math.sqrt(Radius);
+        double perimeter = 2 * Math.PI * radius;
+        double area = Math.PI * radius * radius;
 
-        System.out.printf("\nRadius is %.2f", Radius);
-        System.out.printf("\nCircle's perimeter: 2 x Pi * %.2f  = %.2f", Radius, Perimeter);
-        System.out.printf("\nCircle's area     : Pi * SQRT(%.2f) = %.2f", Radius, Area);
+        System.out.printf("\nRadius is %.2f", radius);
+        System.out.printf("\nCircle's perimeter: 2 x Pi * %.2f  = %.2f", radius, perimeter);
+        System.out.printf("\nCircle's area     : Pi * SQRT(%.2f) = %.2f", radius, area);
     }
 }

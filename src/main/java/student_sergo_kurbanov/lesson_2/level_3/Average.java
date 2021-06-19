@@ -7,17 +7,17 @@ public class Average {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the first number: ");
-        int Num1 = scanner.nextInt();
+        int num1 = scanner.nextInt();
         System.out.print("Enter the second number: ");
-        int Num2 = scanner.nextInt();
+        int num2 = scanner.nextInt();
         System.out.print("Enter the third number: ");
-        int Num3 = scanner.nextInt();
+        int num3 = scanner.nextInt();
 
-        double Average = ((double) Num1 + (double) Num2 + (double) Num3) / (double) 3;
-        System.out.printf("\nThe average of %d, %d and %d is %.2f", Num1, Num2, Num3, Average);
+        double average = ((double) num1 + (double) num2 + (double) num3) / (double) 3;
+        System.out.printf("\nThe average of %d, %d and %d is %.2f", num1, num2, num3, average);
 
         // Using most "wide" type - will get the same result
-        double Average2 = (Num1 + Num2 + Num3) / (double) 3;
-        System.out.printf("\n                                %.2f", Average2);
+        double average2 = (num1 + num2 + num3) / (double) 3;
+        System.out.printf("\n                                %.2f", average2);
     }
 }

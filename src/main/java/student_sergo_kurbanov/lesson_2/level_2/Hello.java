@@ -7,10 +7,10 @@ public class Hello {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your name please: ");
-        String Name = scanner.nextLine();
+        String name = scanner.nextLine();
         // TODO 1 have to check correct input
 
-        if (Name.equals("")) System.out.println("Fuck off!");
-        else System.out.printf("Hello, %s!", Name);
+        if (name.equals("")) System.out.println("Fuck off!");
+        else System.out.printf("Hello, %s!", name);
     }
 }
