@@ -1,6 +1,6 @@
 package student_sergo_kurbanov.lesson_3.level_4;
 
-public class Phone {
+class Phone {
     String model;
 
     Phone(String bookTitle) {

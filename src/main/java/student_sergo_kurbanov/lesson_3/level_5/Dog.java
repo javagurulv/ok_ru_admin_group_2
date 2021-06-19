@@ -58,11 +58,11 @@ public class Dog {
         System.out.printf("%s! %s! %s!", nickname, nickname, nickname);
     }
 
-    public void voice() {
-        System.out.printf("\nnickname = %s, Age = %d, color = %s", nickname, age, color);
-    }
+     void voice() {
+         System.out.printf("\nnickname = %s, Age = %d, color = %s", nickname, age, color);
+     }
 
-    public void changeColor(String color) {
+    void changeColor(String color) {
         setColor(color);
     }
 }

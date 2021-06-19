@@ -10,11 +10,11 @@ class Robot {
         this.name = robotName;
     }
 
-    public void sayHello() {
+    void sayHello() {
         System.out.println("Hello!");
     }
 
-    public void sayYourName() {
+    void sayYourName() {
         System.out.printf("\nMy name is %s!", name);
     }
 }
