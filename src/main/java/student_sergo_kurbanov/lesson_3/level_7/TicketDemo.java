@@ -1,6 +1,6 @@
 package student_sergo_kurbanov.lesson_3.level_7;
 
-public class DemoTicket {
+public class TicketDemo {
     public static void main(String[] args) {
         Ticket trainTicket = new Ticket("Train", (float) 5.25, "12.08.2021");
 
