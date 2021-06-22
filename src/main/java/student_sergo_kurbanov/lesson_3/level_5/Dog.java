@@ -46,7 +46,7 @@ public class Dog {
     }
 
     private void aging() {
-        this.age += 1;
+        setAge(this.age + 1);
     }
 
     void happyBirthday() {
@@ -58,9 +58,9 @@ public class Dog {
         System.out.printf("%s! %s! %s!", nickname, nickname, nickname);
     }
 
-     void voice() {
-         System.out.printf("\nnickname = %s, Age = %d, color = %s", nickname, age, color);
-     }
+    void voice() {
+        System.out.printf("\nnickname = %s, Age = %d, color = %s", nickname, age, color);
+    }
 
     void changeColor(String color) {
         setColor(color);
