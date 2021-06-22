@@ -46,7 +46,7 @@ public class Dog {
     }
 
     private void aging() {
-        setAge(this.age + 1);
+        setAge(age + 1);
     }
 
     void happyBirthday() {
