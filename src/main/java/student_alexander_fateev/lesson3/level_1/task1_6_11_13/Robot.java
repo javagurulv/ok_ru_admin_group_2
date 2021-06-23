@@ -1,4 +1,4 @@
-package student_alexander_fateev.lesson3.level_1.task1_6;
+package student_alexander_fateev.lesson3.level_1.task1_6_11_13;
 
 public class Robot {
     String name;
