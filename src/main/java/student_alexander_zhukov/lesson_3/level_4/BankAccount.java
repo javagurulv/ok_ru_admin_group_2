@@ -22,6 +22,6 @@ class BankAccount {
     }
 
     String getMoneyAmount() {
-        return this.moneyAmount + "";
+        return Integer.toString(this.moneyAmount);
     }
 }
