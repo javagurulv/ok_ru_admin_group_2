@@ -1,6 +1,6 @@
 package teacher.lesson_4_if_statement.lessoncode;
 
-class WirelesLoudspeeker {
+class WirelessLoudSpeaker {
 
 	private static final int MIN_SOUND_VOLUME = 0;
 	private static final int MAX_SOUND_VOLUME = 10;
@@ -9,8 +9,8 @@ class WirelesLoudspeeker {
 	private boolean isOn;
 	private int soundVolume;
 
-	public WirelesLoudspeeker(String wirelesModel,
-				   			boolean isSwitchedOn) {
+	public WirelessLoudSpeaker(String wirelesModel,
+							   boolean isSwitchedOn) {
 		this.model = wirelesModel;
 		this.isOn = isSwitchedOn;
 		this.soundVolume = MIN_SOUND_VOLUME;

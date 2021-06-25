@@ -1,9 +1,9 @@
 package teacher.lesson_4_if_statement.lessoncode;
 
-class WirelesLoudspeekerTest {
+class WirelessLoudSpeakerTest {
 
 	public static void main(String[] args) {
-		WirelesLoudspeekerTest speekerTest = new WirelesLoudspeekerTest();
+		WirelessLoudSpeakerTest speekerTest = new WirelessLoudSpeakerTest();
 		speekerTest.test1();
 		speekerTest.test2();
 		speekerTest.test3();
@@ -15,8 +15,8 @@ class WirelesLoudspeekerTest {
 
 	// Включается ли колонка?
 	public void test1() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", false);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", false);
 		speeker.switchOn();
 		if (speeker.isOn() == true) {
 			System.out.println("TEST 1 = OK");
@@ -27,8 +27,8 @@ class WirelesLoudspeekerTest {
 
 	// Выключается ли колонка
 	public void test2() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", true);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", true);
 		speeker.switchOff();
 		if (speeker.isOn() == false) {
 			System.out.println("TEST 2 = OK");
@@ -39,8 +39,8 @@ class WirelesLoudspeekerTest {
 
 	// Колонка включена, можно ли увеличить звук
 	public void test3() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", true);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", true);
 		int soundVolumeBefore = speeker.getSoundVolume();
 		speeker.increaseSound();
 		int soundVolumeAfter = speeker.getSoundVolume();
@@ -53,8 +53,8 @@ class WirelesLoudspeekerTest {
 
 	// Колонка выключена, можно ли увеличить звук
 	public void test4() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", false);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", false);
 		int soundVolumeBefore = speeker.getSoundVolume();
 		speeker.increaseSound();
 		int soundVolumeAfter = speeker.getSoundVolume();
@@ -67,8 +67,8 @@ class WirelesLoudspeekerTest {
 
 	// Колонка включена, можно ли уменьшить звук
 	public void test5() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", true);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", true);
 		speeker.increaseSound();
 		int soundVolumeBefore = speeker.getSoundVolume();
 		speeker.decreaseSound();
@@ -81,8 +81,8 @@ class WirelesLoudspeekerTest {
 	}
 
 	public void test6() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", true);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", true);
 		int soundVolumeBefore = speeker.getSoundVolume();
 		speeker.decreaseSound();
 		int soundVolumeAfter = speeker.getSoundVolume();
@@ -95,8 +95,8 @@ class WirelesLoudspeekerTest {
 
 	// Колонка выключена, можно ли уменьшить звук
 	public void test7() {
-		WirelesLoudspeeker speeker =
-				new WirelesLoudspeeker("Samsumg", false);
+		WirelessLoudSpeaker speeker =
+				new WirelessLoudSpeaker("Samsumg", false);
 		int soundVolumeBefore = speeker.getSoundVolume();
 		speeker.decreaseSound();
 		int soundVolumeAfter = speeker.getSoundVolume();
