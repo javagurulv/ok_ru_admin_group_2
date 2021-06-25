@@ -3,14 +3,14 @@ package teacher.lesson_4_if_statement.lessoncode;
 class WirelessLoudSpeakerTest {
 
 	public static void main(String[] args) {
-		WirelessLoudSpeakerTest speekerTest = new WirelessLoudSpeakerTest();
-		speekerTest.test1();
-		speekerTest.test2();
-		speekerTest.test3();
-		speekerTest.test4();
-		speekerTest.test5();
-		speekerTest.test6();
-		speekerTest.test7();
+		WirelessLoudSpeakerTest speakerTest = new WirelessLoudSpeakerTest();
+		speakerTest.test1();
+		speakerTest.test2();
+		speakerTest.test3();
+		speakerTest.test4();
+		speakerTest.test5();
+		speakerTest.test6();
+		speakerTest.test7();
 	}
 
 	// Включается ли колонка?
