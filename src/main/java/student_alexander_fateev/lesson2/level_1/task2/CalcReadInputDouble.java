@@ -2,6 +2,9 @@ package student_alexander_fateev.lesson2.level_1.task2;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CalcReadInputDouble {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
