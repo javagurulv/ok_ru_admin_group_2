@@ -1,5 +1,7 @@
 package student_andrey_tryapichnikov.lesson_4.level_1;
 
+import student_andrey_tryapichnikov.boilerplate.ScannerQuery;
+
 import java.util.Scanner;
 
 public class RelToZeroDemo {
@@ -10,9 +12,7 @@ public class RelToZeroDemo {
     }
 
     public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
-        System.out.print("Enter integer: ");
-        var value = scanner.nextInt();
+        var value = ScannerQuery.queryNumberDefault(1)[0];
 
         var status = status(value);
         System.out.printf("The number %s is %s!\n", value, status);
