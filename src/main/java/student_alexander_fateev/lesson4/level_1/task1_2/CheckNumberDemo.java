@@ -1,4 +1,4 @@
-package student_alexander_fateev.lesson4.level_1.task1;
+package student_alexander_fateev.lesson4.level_1.task1_2;
 
 import java.util.Scanner;
 
@@ -10,7 +10,16 @@ class CheckNumberDemo {
         Scanner scan = new Scanner(System.in);
         System.out.print("Input integer: ");
         int number = scan.nextInt();
+
         CheckNumber myNumber = new CheckNumber(number);
-        myNumber.isPositive();
+        if (myNumber.isPositive()) {
+            System.out.print("Positive");
+        }
+        else if (myNumber.isZero()) {
+            System.out.print("Zero");
+        }
+        else {
+            System.out.print("Negative");
+        }
     }
 }
