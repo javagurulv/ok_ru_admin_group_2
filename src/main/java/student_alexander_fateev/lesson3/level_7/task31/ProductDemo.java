@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson3.level_7.task31;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ProductDemo {
     public static void main(String[] args) {
         Product cheburek = new Product("Cheburek");

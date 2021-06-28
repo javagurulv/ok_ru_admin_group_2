@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_2.level_3.task_11;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Average {
     public static void main(String[] args) {
         Scanner myInput = new Scanner( System.in );

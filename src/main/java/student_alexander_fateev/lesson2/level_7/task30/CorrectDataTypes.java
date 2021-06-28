@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson2.level_7.task30;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CorrectDataTypes {
     public static void main(String[] args) {
         int numberOne = 10;
