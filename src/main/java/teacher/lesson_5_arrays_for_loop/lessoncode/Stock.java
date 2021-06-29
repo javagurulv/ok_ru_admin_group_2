@@ -1,6 +1,15 @@
 package teacher.lesson_5_arrays_for_loop.lessoncode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Stock {
+
+	static final String NAME = "ZZZ";
+
+	static boolean inOperation;
+	static List<Integer> ops = new ArrayList<>();
+
     private String companyName;
     private int actualPrice;
     private int maximumPrice;
@@ -41,4 +50,13 @@ class Stock {
     public int getActualPrice() { return actualPrice; }
     public int getMinPrice() { return minimumPrice; }
     public int getMaxPrice() { return maximumPrice; }
+
+    public static int getStaticPrice() {
+		inOperation = false;
+
+		// minimumPrice = actualPrice;
+
+    	return 0;
+	}
+
 }

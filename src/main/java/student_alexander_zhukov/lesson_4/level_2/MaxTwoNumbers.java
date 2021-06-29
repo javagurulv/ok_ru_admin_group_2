@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_4.level_2;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class MaxTwoNumbers {
     public static void main(String[] args) {
         Scanner myInput = new Scanner( System.in );
