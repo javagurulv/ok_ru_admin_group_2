@@ -1,8 +1,11 @@
 package student_alexander_fateev.lesson4.level_1.task3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfWeek {
     private int day;
-    private String dayVerbose;
+    private String dayVerbose; // зачем это свойство? Ведь в intToDayName() итак значение возвращается из метода.
 
     DayOfWeek (int day) {
         this.day = day;
