@@ -3,6 +3,9 @@ package student_alexey_krenev.lesson_2.level_3;
 import java.util.Scanner;
 import java.lang.Math;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Task_10_Radius {
     public static void main(String[] args) {
         System.out.println("Insert radius:");
