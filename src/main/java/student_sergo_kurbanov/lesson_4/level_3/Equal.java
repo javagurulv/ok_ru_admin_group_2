@@ -13,13 +13,13 @@ public class Equal {
         System.out.print("Enter third number: ");
         int Third = scanner.nextInt();
 
-        boolean FirstEqSecond = (First == Second);
-        boolean SecondEqThird = (Second == Third);
-        boolean ThirstEqThird = (First == Third);
+        boolean firstEqSecond = (First == Second);
+        boolean secondEqThird = (Second == Third);
+        boolean thirstEqThird = (First == Third);
 
-        if (FirstEqSecond && SecondEqThird && ThirstEqThird) {
+        if (firstEqSecond && secondEqThird && thirstEqThird) {
             System.out.printf("\nAll numbers are equal");
-        } else if (FirstEqSecond || SecondEqThird || ThirstEqThird) {
+        } else if (firstEqSecond || secondEqThird || thirstEqThird) {
             System.out.printf("\nNeither all are equal or different");
         } else {
             System.out.printf("\nAll numbers are different");

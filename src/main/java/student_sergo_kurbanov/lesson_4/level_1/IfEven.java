@@ -6,12 +6,12 @@ public class IfEven {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter int number: ");
-        int Number = scanner.nextInt();
+        int number = scanner.nextInt();
 
-        if (Number % 2 == 0) {
-            System.out.printf("\n%d is even", Number);
+        if (number % 2 == 0) {
+            System.out.printf("\n%d is even", number);
         } else {
-            System.out.printf("\n%d is odd", Number);
+            System.out.printf("\n%d is odd", number);
         }
     }
 }

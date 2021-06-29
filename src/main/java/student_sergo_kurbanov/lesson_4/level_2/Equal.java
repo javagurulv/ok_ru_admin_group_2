@@ -6,15 +6,15 @@ public class Equal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter first number: ");
-        int First = scanner.nextInt();
+        int first = scanner.nextInt();
 
         System.out.print("Enter second number: ");
-        int Second = scanner.nextInt();
+        int second = scanner.nextInt();
 
-        if (First == Second) {
-            System.out.printf("\n%d and %s are equals", First, Second);
+        if (first == second) {
+            System.out.printf("\n%d and %s are equals", first, second);
         } else {
-            System.out.printf("\n%d and %s are different", First, Second);
+            System.out.printf("\n%d and %s are different", first, second);
         }
     }
 }

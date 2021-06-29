@@ -13,15 +13,15 @@ public class Order {
         System.out.print("Enter third number: ");
         int Third = scanner.nextInt();
 
-        boolean FirstLessSecond = (First < Second);
-        boolean SecondLessThird = (Second < Third);
-        boolean FirstGtSecond = (First > Second);
-        boolean SecondGtThird = (Second > Third);
+        boolean firstLessSecond = (First < Second);
+        boolean secondLessThird = (Second < Third);
+        boolean firstGtSecond = (First > Second);
+        boolean secondGtThird = (Second > Third);
 
 
-        if (FirstLessSecond && SecondLessThird) {
+        if (firstLessSecond && secondLessThird) {
             System.out.printf("\nincreasing");
-        } else if (FirstGtSecond && SecondGtThird) {
+        } else if (firstGtSecond && secondGtThird) {
             System.out.printf("\ndecreasing");
         } else {
             System.out.printf("\nNeither increasing or decreasing order");

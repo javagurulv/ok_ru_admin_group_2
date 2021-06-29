@@ -11,19 +11,19 @@ public class Max {
         System.out.print("Enter second number: ");
         int Second = scanner.nextInt();
         System.out.print("Enter third number: ");
-        int Third = scanner.nextInt();
+        int third = scanner.nextInt();
 
-        int Max = First;
+        int max = First;
 
-        if (Second > Max) {
-            Max = Second;
+        if (Second > max) {
+            max = Second;
         }
-        if (Third > Max) {
-            Max = Third;
+        if (third > max) {
+            max = third;
         }
 
         // TODO some or all numbers could be equal:
         //  in that case it wouldn't be correct answer
-        System.out.printf("\nMax number is %d", Max);
+        System.out.printf("\nMax number is %d", max);
     }
 }
