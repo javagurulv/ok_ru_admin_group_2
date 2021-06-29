@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_4.level_5;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class LightColorDetectorDemo {
     public static void main(String[] args) {
         LightColorDetector testColor = new LightColorDetector();

@@ -1,6 +1,12 @@
 package student_alexander_zhukov.lesson_4.level_4;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class Calculator {
+
+	@CodeReviewComment(teacher = "Дефолтный конструктор у класса можно не писать явно если он единственный конструктор в классе. Java при компиляции его добавит автоматически.")
     public Calculator() {
     }
 
