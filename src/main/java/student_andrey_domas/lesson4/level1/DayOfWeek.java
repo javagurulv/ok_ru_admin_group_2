@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class DayOfWeek {
     public static void main(String[] args) {
         System.out.print("Enter a day number: ");

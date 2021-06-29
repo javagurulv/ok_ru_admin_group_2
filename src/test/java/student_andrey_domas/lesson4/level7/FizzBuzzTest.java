@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FizzBuzzTest {
 
     FizzBuzz fb;

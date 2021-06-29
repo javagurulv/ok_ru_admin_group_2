@@ -3,6 +3,9 @@ package student_andrey_domas.lesson2.level3;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class MultiplicationTable {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);

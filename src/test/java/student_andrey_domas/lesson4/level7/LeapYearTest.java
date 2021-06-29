@@ -4,6 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class LeapYearTest {
 
     LeapYear ly;

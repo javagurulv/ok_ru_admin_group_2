@@ -1,9 +1,11 @@
 package student_andrey_domas.lesson4.level4;
 
+import teacher.codereview.CodeReview;
 
 /**
  * See unit tests.
  */
+@CodeReview(approved = true)
 class Calculator {
 
     public int sum(int firstNumber, int secondNumber) {

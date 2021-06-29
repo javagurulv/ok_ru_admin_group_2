@@ -1,5 +1,8 @@
 package student_andrey_domas.lesson4.level6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Stock {
 
     private String name;
