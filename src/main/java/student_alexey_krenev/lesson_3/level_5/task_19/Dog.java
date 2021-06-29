@@ -1,8 +1,8 @@
 package student_alexey_krenev.lesson_3.level_5.task_19;
 
+import teacher.codereview.CodeReview;
 
-import javax.sound.midi.Soundbank;
-
+@CodeReview(approved = true)
 class Dog {
     String dogName;
     int dogAge;

@@ -1,5 +1,8 @@
 package student_andrey_domas.lesson3.level7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CircleDemo {
     public static void main(String[] args) {
         Circle c1 = new Circle(4);

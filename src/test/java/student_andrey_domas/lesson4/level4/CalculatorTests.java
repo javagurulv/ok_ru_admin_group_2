@@ -5,6 +5,9 @@ import org.junit.Before;
 
 import static org.junit.Assert.*;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CalculatorTests {
 
     Calculator calculator;

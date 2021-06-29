@@ -2,6 +2,9 @@ package student_andrey_domas.lesson4.level1;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class NegativePositive {
     public static void main(String[] args) {
         System.out.print("Enter a number: ");

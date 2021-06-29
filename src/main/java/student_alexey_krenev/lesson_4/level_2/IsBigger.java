@@ -2,6 +2,9 @@ package student_alexey_krenev.lesson_4.level_2;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class IsBigger {
     public static void main(String[] args) {
         System.out.println("Insert first int number: ");

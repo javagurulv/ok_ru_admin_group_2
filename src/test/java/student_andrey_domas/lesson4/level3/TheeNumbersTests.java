@@ -5,6 +5,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TheeNumbersTests {
 
     @Test

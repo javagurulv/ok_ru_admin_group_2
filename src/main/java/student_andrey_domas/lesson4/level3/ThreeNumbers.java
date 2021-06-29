@@ -2,9 +2,12 @@ package student_andrey_domas.lesson4.level3;
 
 import java.util.*;
 
+import teacher.codereview.CodeReview;
+
 /**
  * See tests also.
  */
+@CodeReview(approved = true)
 public class ThreeNumbers {
 
     final static int N = 3;

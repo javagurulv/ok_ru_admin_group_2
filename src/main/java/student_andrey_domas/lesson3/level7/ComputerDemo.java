@@ -1,5 +1,8 @@
 package student_andrey_domas.lesson3.level7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ComputerDemo {
 
     public static void main(String[] args) {
