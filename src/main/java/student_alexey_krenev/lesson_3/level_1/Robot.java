@@ -1,6 +1,6 @@
 package student_alexey_krenev.lesson_3.level_1;
 
-public class Robot {
+class Robot {
     public void sayHello() {
         System.out.println("Hello!"); // тут напишите команду распечатки на консоли строки "Hello!"
     }
