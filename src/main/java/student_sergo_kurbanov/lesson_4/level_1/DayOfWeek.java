@@ -2,7 +2,7 @@ package student_sergo_kurbanov.lesson_4.level_1;
 
 import java.util.Scanner;
 
-public class DayOfWeek {
+class DayOfWeek {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter week day number 1-7: ");

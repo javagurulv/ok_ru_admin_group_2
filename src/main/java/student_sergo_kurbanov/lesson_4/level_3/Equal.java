@@ -2,7 +2,7 @@ package student_sergo_kurbanov.lesson_4.level_3;
 
 import java.util.Scanner;
 
-public class Equal {
+class Equal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

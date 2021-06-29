@@ -1,6 +1,6 @@
 package student_sergo_kurbanov.lesson_4.level_5;
 
-public class LightColorDetector {
+class LightColorDetector {
     public String detect(int wavelength) {
 
         if (isViolet(wavelength)) {
