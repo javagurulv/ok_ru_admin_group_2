@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Subtraction {
     public static double subtract(double value1, double value2) {
         return value1 - value2;

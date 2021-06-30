@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Addition {
     public static double add(double[] values) {
         double result = 0;

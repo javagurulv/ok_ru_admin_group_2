@@ -11,7 +11,9 @@ class NotOperationExample {
 		isNegative = !isPositive;
 		isNegative = !(10 > 0);
 
-		if (!(10 > 0)) {
+		int number = 100;
+
+		if (!(number > 0)) {
 			//
 		}
 

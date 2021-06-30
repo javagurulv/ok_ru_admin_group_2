@@ -23,13 +23,25 @@ class StockArrayExample {
 		stocks[1] = new Stock("Amazon", 1, 1, 1);
 		stocks[2] = new Stock("Ali", 1, 1, 1);
 
+		//stocks[0] = new Boolean(true);
+
 		Stock googleStock = stocks[0];
 		Stock amazonStock = stocks[1];
 		Stock aliStock = stocks[2];
 
+		//aliStock.getClass()
+
+		if (stocks[0] != null) {
+			Stock stocks0 = stocks[0];
+			System.out.println(stocks0.getActualPrice());
+		}
+
 		googleStock.updatePrice1(12);
 		amazonStock.updatePrice1(13);
 		aliStock.updatePrice1(888);
+
+
+		//Stock.inOperation ...
 
 	}
 

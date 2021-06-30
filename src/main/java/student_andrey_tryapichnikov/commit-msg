@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/usr/bin/env bash
 read -r msg < "$1"
 printf 'andrey_tryapichnikov: %s' "$msg" > "$1"

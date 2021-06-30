@@ -2,6 +2,9 @@ package student_boris_sukhinin.lesson_1;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class HelloWorld {
 
     public static void main(String[] args) {
