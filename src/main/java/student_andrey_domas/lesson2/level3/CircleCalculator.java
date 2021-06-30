@@ -2,6 +2,9 @@ package student_andrey_domas.lesson2.level3;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CircleCalculator {
     public static void main(String[] args) {
         System.out.print("Radius: ");

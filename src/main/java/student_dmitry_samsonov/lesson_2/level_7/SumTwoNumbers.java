@@ -1,6 +1,6 @@
 package student_dmitry_samsonov.lesson_2.level_7;
 
-public class SumTwoNumbers {
+class SumTwoNumbers {
 
     public static void main(String[] args) {
 

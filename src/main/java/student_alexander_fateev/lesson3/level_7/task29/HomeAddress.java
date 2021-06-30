@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson3.level_7.task29;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class HomeAddress {
     String streetName;
     int homeNumber;

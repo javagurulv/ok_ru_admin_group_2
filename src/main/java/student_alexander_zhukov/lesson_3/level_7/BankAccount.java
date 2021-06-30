@@ -1,5 +1,8 @@
 package student_alexander_zhukov.lesson_3.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class BankAccount {
     String owner;
     int money;

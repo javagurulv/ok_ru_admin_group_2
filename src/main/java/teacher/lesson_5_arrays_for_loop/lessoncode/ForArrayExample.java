@@ -11,6 +11,10 @@ class ForArrayExample {
 
 		int[] randomNumbers = new int[1000];
 
+		for (int i = 0; i < 100; i++) {
+			System.out.println(i);
+		}
+
 		for (int i = 0; i < randomNumbers.length; i++) {
 			int randomNumber = random.nextInt(10000);
 			randomNumbers[i] = randomNumber;
@@ -19,6 +23,8 @@ class ForArrayExample {
 		for (int i = 0; i < randomNumbers.length; i++) {
 			System.out.println(randomNumbers[i]);
 		}
+
+		//i = 0;
 
 	}
 

@@ -1,5 +1,9 @@
 package student_andrey_domas.lesson3.level7;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class Computer {
 
     public String getManufacturer() {
@@ -10,6 +14,7 @@ class Computer {
         return model;
     }
 
+    @CodeReviewComment(teacher = "Свойства класса лучше объявлять на самом верху.")
     String manufacturer;
     String model;
 
