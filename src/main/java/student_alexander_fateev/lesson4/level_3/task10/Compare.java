@@ -16,6 +16,9 @@ class Compare {
         else if ((secondNumber > firstNumber) && (secondNumber > thirdNumber)) {
             return secondNumber;
         }
+        else if ((firstNumber == secondNumber) && (firstNumber > thirdNumber)) {
+            return firstNumber;
+        }
         else {
             return thirdNumber;
         }
