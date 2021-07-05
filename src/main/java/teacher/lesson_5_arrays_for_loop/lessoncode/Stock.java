@@ -24,16 +24,19 @@ class Stock {
         this.maximumPrice = maxPrice;
         this.minimumPrice = minPrice;
     }
+
     public void updatePrice1(int price) {
         if (price == minimumPrice) {
             this.minimumPrice = price;
         }
     }
+
     public void updatePrice2(int price) {
         if (price == actualPrice) {
             this.actualPrice = price;
         }
     }
+
     public void updatePrice3(int price) {
         if (price == maximumPrice) {
             this.maximumPrice = price;

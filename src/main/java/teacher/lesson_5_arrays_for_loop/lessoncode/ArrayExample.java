@@ -33,7 +33,7 @@ class ArrayExample {
 		int sum = marks[0] + marks[1] + marks[2] + marks[3];
 		System.out.println(sum);
 
-		// marks[4] = 0; java.lang.ArrayIndexOutOfBoundsException
+		//marks[4] = 0; java.lang.ArrayIndexOutOfBoundsException
 
 
 		System.out.println("Array length = " + marks.length);
