@@ -5,10 +5,13 @@ import java.util.Scanner;
 
 class ArrayUtil {
 
+	static boolean ops = true;
+
 	public static int getArrayLengthFromUser() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter array length: ");
 		int arrLength = sc.nextInt();
+		ops = false;
 		return arrLength;
 	}
 

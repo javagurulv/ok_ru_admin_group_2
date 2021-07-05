@@ -23,6 +23,13 @@ class StockArrayExample {
 		stocks[1] = new Stock("Amazon", 1, 1, 1);
 		stocks[2] = new Stock("Ali", 1, 1, 1);
 
+		Stock stock = stocks[0];
+
+		Class classs = stock.getClass();
+
+		stocks[0] = stocks[1];
+		stocks[1] = stock;
+
 		//stocks[0] = new Boolean(true);
 
 		Stock googleStock = stocks[0];
@@ -41,7 +48,7 @@ class StockArrayExample {
 		aliStock.updatePrice1(888);
 
 
-		//Stock.inOperation ...
+		// Stock.inOperation
 
 	}
 

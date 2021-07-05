@@ -1,27 +1,37 @@
 package student_sergo_kurbanov.lesson_4.level_5;
 
-class LightColorDetector {
-    public String detect(int wavelength) {
+public class LightColorDetector {
+    public Colors detect(int wavelength) {
 
         if (isViolet(wavelength)) {
-            return "Violet";
+            return Colors.VIOLET;
         }
         if (isBlue(wavelength)) {
-            return "Blue";
+            return Colors.BLUE;
         }
         if (isGreen(wavelength)) {
-            return "Green";
+            return Colors.GREEN;
         }
         if (isYellow(wavelength)) {
-            return "Yellow";
+            return Colors.YELLOW;
         }
         if (isOrange(wavelength)) {
-            return "Orange";
+            return Colors.ORANGE;
         }
         if (isRed(wavelength)) {
-            return "Red";
+            return Colors.RED;
         }
-        return "Invisible Light";
+        return Colors.INVISIBLE;
+    }
+
+    public enum Colors {
+        VIOLET,
+        BLUE,
+        GREEN,
+        YELLOW,
+        ORANGE,
+        RED,
+        INVISIBLE,
     }
 
     private boolean isRed(int wavelength) {

@@ -8,6 +8,11 @@ class WhileExample {
 		Scanner sc = new Scanner(System.in);
 
 		int userNumber = sc.nextInt();
+
+		while (pingServer()) {
+			//dfdgfg
+		}
+
 		while (userNumber != 0) {
 			System.out.println("Your number = " + userNumber);
 			userNumber = sc.nextInt();
@@ -15,5 +20,9 @@ class WhileExample {
 		System.out.println("End!");
 	}
 
+
+	static boolean pingServer() {
+		return true;
+	}
 
 }
