@@ -7,7 +7,7 @@ public class ArrayUtil {
         return new int[arrayLength];
     }
 
-    public void FillWithRand(int[] array) {
+    public void fillArrayWithRandomNumbers(int[] array) {
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt();
