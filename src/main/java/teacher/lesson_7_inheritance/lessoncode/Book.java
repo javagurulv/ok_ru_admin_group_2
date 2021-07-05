@@ -8,6 +8,10 @@ public class Book extends Object {
 		this.title = title;
 	}
 
+	public void method() {
+
+	}
+
 	public static void main(String[] args) {
 		Book b = new Book("");
 	}

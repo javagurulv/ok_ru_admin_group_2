@@ -24,4 +24,14 @@ public class ElectricCar extends Car {
 		System.out.println("Accumulator switched OFF!");
 	}
 
+	@Override
+	public String toString() {
+		return "model = " + getModel()
+				+ " capacity = " + this.bateryCapacy;
+	}
+
+	public void additionalMethod() {
+
+	}
+
 }
