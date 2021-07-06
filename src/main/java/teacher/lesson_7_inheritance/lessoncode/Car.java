@@ -14,6 +14,11 @@ public abstract class Car extends Object {
 		}
 	}
 
+	public Car() {
+		//super();
+		this.model = model;
+	}
+
 	public Car(String model) {
 		//super();
 		this.model = model;
@@ -42,11 +47,19 @@ public abstract class Car extends Object {
 	}
 
 	protected void method4() {
-
+		System.out.println("dsfdfds asfsdf");
 	}
 
 	public abstract void start();
 
 	public abstract void stop();
+
+	public void m1() {
+		m2();
+	}
+
+	public void m2() {
+		System.out.println("Parent M2");
+	}
 
 }

@@ -1,10 +1,13 @@
 package teacher.lesson_7_inheritance.lessoncode;
 
-public class PetrolCar extends Car {
+public final class PetrolCar extends Car {
+
+	public static final String ABC = "zdfsdf";
 
 	public PetrolCar(String model) {
-		//super(model);
-		super(model, 10);
+		super(model);
+		//super(model, 10);
+		//super();
 
 		this.model2 = "afdss";
 		this.model3 = "afdss";
@@ -22,8 +25,17 @@ public class PetrolCar extends Car {
 		method4();
 
 		//new Car("model");
-
+		abc();
 		System.out.println("Start Petrol Engine!");
+	}
+
+	@Override
+	protected void method4() {
+		System.out.println("dsfdfds");
+	}
+
+	private void abc() {
+
 	}
 
 	@Override
@@ -34,6 +46,10 @@ public class PetrolCar extends Car {
 	@Override
 	public String toString() {
 		return "Petrol Car model = " + getModel();
+	}
+
+	public void m2() {
+		System.out.println("Naslednik M2");
 	}
 
 }

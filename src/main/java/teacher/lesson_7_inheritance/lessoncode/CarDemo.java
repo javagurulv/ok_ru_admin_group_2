@@ -8,18 +8,23 @@ public class CarDemo {
 
 		PetrolCar petrolCar = new PetrolCar("Ferrary");
 
+		petrolCar.m1();
+
+
 		System.out.println(petrolCar);
 
 		ElectricCar electricCar = new ElectricCar("Tesla 3", 100);
 		//PetrolCar petrolCar = new PetrolCar("Ferrary Monza");
 
 		Car car1 = electricCar;
+		//car1.additionalMethod();
+
 		ElectricCar car2 = electricCar;
 		car2.additionalMethod();
 
-
 		if (car1 instanceof ElectricCar) {
 			car2 = (ElectricCar) car1;
+			car2.additionalMethod();
 		}
 
 		//car1 = new PetrolCar("Ferrary");
@@ -27,6 +32,8 @@ public class CarDemo {
 
 		System.out.println(electricCar);
 
+
+		PetrolCar[] pcars = new PetrolCar[10];
 
 		Car[] cars = new Car[10];
 		cars[0] = new PetrolCar("Ferrary");
@@ -36,7 +43,9 @@ public class CarDemo {
 
 		//Car car2 = petrolCar;
 
-		car1.start();
+		cars[0].start();
+
+
 		//car2.start();
 
 
