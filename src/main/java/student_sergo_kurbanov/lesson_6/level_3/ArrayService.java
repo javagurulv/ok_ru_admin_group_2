@@ -43,12 +43,12 @@ public class ArrayService {
 
     int replaceAll(int[] arr, int numberToReplace, int newNumber) {
         int countReplaced = 0;
-        boolean isReplaced = true;
+        boolean isReplaced;
 
-        while (isReplaced) {
+        do {
             isReplaced = replaceFirst(arr, numberToReplace, newNumber);
             countReplaced++;
-        }
+        } while (isReplaced);
 
         return countReplaced - 1;
     }

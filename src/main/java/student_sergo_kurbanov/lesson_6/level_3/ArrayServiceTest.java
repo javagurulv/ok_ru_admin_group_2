@@ -73,10 +73,11 @@ public class ArrayServiceTest {
         int[] testArray = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9};
         int numberToReplace = 9;
         int newNumber = 97;
+        int positionOfNewNumber = 10;
         boolean expectedResult = true;
 
         boolean result = arrayService.replaceFirst(testArray, numberToReplace, newNumber);
-        if (result) {
+        if (result && testArray[positionOfNewNumber] == newNumber) {
             System.out.println("PASS");
         } else {
             System.out.println("FAIL");
@@ -106,7 +107,7 @@ public class ArrayServiceTest {
         int expectedResult = 4;
 
         int result = arrayService.replaceAll(testArray, numberToReplace, newNumber);
-        if (result == expectedResult) {
+        if (result == expectedResult && arrayService.countOccurrences(testArray, numberToReplace) == 0) {
             System.out.println("PASS");
         } else {
             System.out.println("FAIL");
@@ -131,7 +132,11 @@ public class ArrayServiceTest {
     public void testRevert() {
         ArrayService arrayService = new ArrayService();
         int[] testArray = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9};
-        int[] testArrayCopy = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9};
+
+        int[] testArrayCopy = new int[testArray.length];
+        for (int i = 0; i < testArray.length; i++) {
+            testArrayCopy[i] = testArray[i];
+        }
 
         arrayService.revert(testArray);
         arrayService.revert(testArray);
@@ -147,13 +152,13 @@ public class ArrayServiceTest {
 
     public void testSort() {
         ArrayService arrayService = new ArrayService();
+        int[] testArray = {1, 9, 5, 9, 6, 7, 2, 8, 9, 0, 9, 3, -1, 4};
         int[] testSortedArray = {-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 9};
-        int[] testUnSortedArray = {1, 9, 5, 9, 6, 7, 2, 8, 9, 0, 9, 3, -1, 4};
 
-        arrayService.sort(testUnSortedArray);
+        arrayService.sort(testArray);
 
         for (int i = 0; i < testSortedArray.length; i++) {
-            if (testUnSortedArray[i] != testSortedArray[i]) {
+            if (testArray[i] != testSortedArray[i]) {
                 System.out.println("FAIL");
                 return;
             }
