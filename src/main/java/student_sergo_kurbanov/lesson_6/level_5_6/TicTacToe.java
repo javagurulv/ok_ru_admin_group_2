@@ -1,5 +1,6 @@
 package student_sergo_kurbanov.lesson_6.level_5_6;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -162,5 +163,74 @@ public class TicTacToe {
                 break;
             }
         }
+    }
+
+
+    private Move[] moves;
+
+    private void calcAllSteps(int[][] field) {
+        moves = new Move[field.length * field[0].length];
+
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                moves[i * field.length + j] = new Move(i, j);
+            }
+        }
+    }
+
+    public void playAI() {
+        int[][] field = createField();
+        calcAllSteps(field);
+
+        printFieldToConsole(field);
+        while (true) {
+
+            Move move0 = getNextMoveAI();
+            field[move0.getX()][move0.getY()] = 0;
+            printFieldToConsole(field);
+            if (isWinPosition(field, 0)) {
+                System.out.println("Player 0 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+
+//            printFieldToConsole(field);
+            Move move1 = getNextMoveAI();
+            field[move1.getX()][move1.getY()] = 1;
+            printFieldToConsole(field);
+            if (isWinPosition(field, 1)) {
+                System.out.println("Player 1 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+        }
+    }
+
+    public Move getNextMoveAI() {
+        Random random = new Random();
+
+        int i = random.nextInt(moves.length);
+        Move m = moves[i];
+        RemoveMove(i);
+        return m;
+    }
+
+    public void RemoveMove(int movePosition) {
+        Move[] newMoves = new Move[moves.length - 1];
+
+        for (int i = 0, j = 0; i < moves.length; i++) {
+            if (i == movePosition) {
+                continue;
+            }
+            newMoves[j] = moves[i];
+            j++;
+        }
+        moves = newMoves;
     }
 }
