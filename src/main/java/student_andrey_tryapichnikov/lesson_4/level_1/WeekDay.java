@@ -4,7 +4,7 @@ public class WeekDay {
     public static String getDayName(int daynumber) {
         String day;
         switch (daynumber) {
-            case 1 -> day = "Mondey";
+            case 1 -> day = "Monday";
             case 2 -> day = "Tuesday";
             case 3 -> day = "It is Wednesday, my dudes";
             case 4 -> day = "Thursday";
