@@ -1,4 +1,4 @@
-package student_sergo_kurbanov.lesson_6.level_5;
+package student_sergo_kurbanov.lesson_6.level_5_6;
 
 public class TicTacToeTest {
     public static void main(String[] args) {
@@ -7,6 +7,7 @@ public class TicTacToeTest {
         ticTacToe.isWinPositionForVerticalsTest();
         ticTacToe.isWinPositionForDiagonalsTest();
         ticTacToe.isDrawPositionTest();
+        ticTacToe.createFieldTest();
     }
 
     public void isWinPositionForHorizontalsTest() {
@@ -60,22 +61,55 @@ public class TicTacToeTest {
     }
 
     public void isDrawPositionTest() {
-        int[][] field1 = {
+        int[][] diagonal0Win = {
                 {0, 1, 1},
-                {1, 1, 0},
+                {1, 0, 1},
                 {0, 1, 0},};
-        int[][] field2 = {
+        int[][] notFinished = {
                 {0, 0, 1},
                 {1, 0, 0},
-                {1, -1, 1},};
+                {0, -1, 1},};
+        int[][] draw = {
+                {0, 0, 1},
+                {1, 0, 0},
+                {0, 1, 1},};
 
         TicTacToe ticTacToe = new TicTacToe();
 
-        if (!ticTacToe.isDrawPosition(field1) &&
-                ticTacToe.isDrawPosition(field2)) {
+        if (!ticTacToe.isDrawPosition(diagonal0Win) &&
+                !ticTacToe.isDrawPosition(notFinished) &&
+                ticTacToe.isDrawPosition(draw)) {
             System.out.println("PASS");
         } else {
             System.out.println("FAIL");
         }
+    }
+
+    public void createFieldTest() {
+        TicTacToe ticTacToe = new TicTacToe();
+        int[][] field = ticTacToe.createField();
+
+        if (CheckField(field)) {
+            System.out.println("PASS");
+        } else {
+            System.out.println("FAIL");
+        }
+    }
+
+    private boolean CheckField(int[][] field) {
+        if (field.length != 3) {
+            return false;
+        }
+        for (int i = 0; i < field.length; i++) {
+            if (field[i].length != 3) {
+                return false;
+            }
+            for (int j = 0; j < field[i].length; j++) {
+                if (field[i][j] != -1) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
