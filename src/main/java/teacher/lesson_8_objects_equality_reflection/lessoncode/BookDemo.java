@@ -1,4 +1,4 @@
-package teacher.lesson_8_objects_equality.lessoncode;
+package teacher.lesson_8_objects_equality_reflection.lessoncode;
 
 public class BookDemo {
 
