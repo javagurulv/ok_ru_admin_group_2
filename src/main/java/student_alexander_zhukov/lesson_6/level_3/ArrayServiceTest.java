@@ -36,6 +36,7 @@ class ArrayServiceTest {
         newTest.replaceAllTest(newTest.createArr(), 6, 66, 1);
         newTest.replaceAllTest(newTest.createArr(), 9, 8, 0);
         newTest.revertTest(newTest.createArr());
+        newTest.sortTest(newTest.createArr());
 
     }
 
@@ -72,7 +73,15 @@ class ArrayServiceTest {
         testRevert.revert(arr);
         int[] revertArr = new int[] {3, 6, 3, 2, 3, 2, 1};
         boolean result = (Arrays.equals(arr, revertArr));
-        checkTestResult(result,"RevertTest ");
+        checkTestResult(result,"revertTest ");
+    }
+
+    public void sortTest(int[] arr) {
+        ArrayService testSort = new ArrayService();
+        testSort.sort(arr);
+        int[] sortArr = new int[] {1, 2, 2, 3, 3, 3, 6};
+        boolean result = (Arrays.equals(arr, sortArr));
+        checkTestResult(result,"sortTest ");
     }
 
     private void checkTestResult(boolean condition, String testName) {

@@ -1,6 +1,16 @@
 package student_sergo_kurbanov.lesson_4.level_5;
 
 public class LightColorDetector {
+    public enum Colors {
+        VIOLET,
+        BLUE,
+        GREEN,
+        YELLOW,
+        ORANGE,
+        RED,
+        INVISIBLE,
+    }
+
     public Colors detect(int wavelength) {
 
         if (isViolet(wavelength)) {
@@ -22,16 +32,6 @@ public class LightColorDetector {
             return Colors.RED;
         }
         return Colors.INVISIBLE;
-    }
-
-    public enum Colors {
-        VIOLET,
-        BLUE,
-        GREEN,
-        YELLOW,
-        ORANGE,
-        RED,
-        INVISIBLE,
     }
 
     private boolean isRed(int wavelength) {
