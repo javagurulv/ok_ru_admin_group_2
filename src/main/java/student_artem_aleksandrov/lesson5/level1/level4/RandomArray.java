@@ -1,6 +1,10 @@
 package student_artem_aleksandrov.lesson5.level1.level4;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 public class RandomArray {
 

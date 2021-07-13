@@ -6,7 +6,7 @@ public class Min {
 
     public static void main(String[] args) {
 
-        int[] numbers = new GetNumbers().getNumbers(2);
+        int[] numbers = GetNumbers.getNumbers(2);
 
         System.out.println(Math.min(numbers[0], numbers[1]));
     }

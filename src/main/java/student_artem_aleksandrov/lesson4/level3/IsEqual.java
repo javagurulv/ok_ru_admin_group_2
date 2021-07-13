@@ -12,7 +12,7 @@ Write a Java program that accepts three numbers and prints:
  */
 public class IsEqual {
     public static void main(String[] args) {
-        int[] numbers = new GetNumbers().getNumbers(3);
+        int[] numbers = GetNumbers.getNumbers(3);
 
         if (numbers[0] == numbers[1] & numbers[1] == numbers[2]){
             System.out.println("All numbers are equal");

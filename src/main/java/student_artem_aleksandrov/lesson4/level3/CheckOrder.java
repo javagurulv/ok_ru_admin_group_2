@@ -24,7 +24,7 @@ class Calculator {
  */
 public class CheckOrder {
     public static void main(String[] args) {
-        int[] numbers = new GetNumbers().getNumbers(3);
+        int[] numbers = GetNumbers.getNumbers(3);
 
         if (numbers[0] > numbers[1] & numbers[1] > numbers[2]) {
             System.out.println("decreasing");

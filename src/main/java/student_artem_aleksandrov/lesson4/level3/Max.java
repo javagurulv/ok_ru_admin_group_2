@@ -4,7 +4,7 @@ import student_artem_aleksandrov.lesson4.GetNumbers;
 
 public class Max {
     public static void main(String[] args) {
-        int[] numbers = new GetNumbers().getNumbers(3);
+        int[] numbers = GetNumbers.getNumbers(3);
 
         int max = numbers[0];
 
