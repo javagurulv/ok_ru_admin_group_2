@@ -1,12 +1,17 @@
 package teacher.lesson_8_objects_equality_reflection.lessoncode;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 
 public class BookDemo {
 
 	public static void main(String[] args)
 			throws NoSuchFieldException,
-			       IllegalAccessException {
+			       IllegalAccessException,
+				   NoSuchMethodException,
+				   InvocationTargetException,
+				   InstantiationException {
 		Book book1 = new Book("Star", "A");
 		Book book2 = new Book("Star", "A");
 
@@ -33,6 +38,9 @@ public class BookDemo {
 
 		Class bookClass = book3.getClass();
 
+		Constructor constructor = bookClass.getDeclaredConstructor(String.class, String.class);
+		Book newBook = (Book) constructor.newInstance("zfzsdsa", "asdasda");
+
 		Field[] fields = bookClass.getDeclaredFields();
 
 		Field titleField = bookClass.getDeclaredField("title");
@@ -42,6 +50,7 @@ public class BookDemo {
 		bookClass.getDeclaredMethods();
 
 		System.out.println("Book 3 title = " + book3.getTitle());
+
 
 	}
 

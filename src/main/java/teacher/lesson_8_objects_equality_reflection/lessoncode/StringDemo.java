@@ -10,7 +10,6 @@ public class StringDemo {
 		String upperStr = str.toUpperCase();
 
 
-
 		System.out.println(str);
 		System.out.println(upperStr);
 
