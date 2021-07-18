@@ -1,5 +1,8 @@
 package student_alexander_zhukov.lesson_4.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StockDemo {
     public static void main(String[] args) {
         Stock google = new Stock("GOOG", 10);

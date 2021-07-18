@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_6.level_6;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TicTacToe {
 
     public static void main(String[] args) {

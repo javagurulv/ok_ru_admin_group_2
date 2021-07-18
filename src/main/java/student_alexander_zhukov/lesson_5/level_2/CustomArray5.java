@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_5.level_2;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CustomArray5 {
     public static void main(String[] args) {
         int[] myArray = new int[3];

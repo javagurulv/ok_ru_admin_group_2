@@ -3,6 +3,9 @@ package student_alexander_zhukov.lesson_5.level_4;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UserArray3 {
     public static void main(String[] args) {
 

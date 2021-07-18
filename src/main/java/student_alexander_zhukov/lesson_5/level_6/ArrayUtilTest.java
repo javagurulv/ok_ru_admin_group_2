@@ -1,5 +1,8 @@
 package student_alexander_zhukov.lesson_5.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ArrayUtilTest {
 
     public static void main(String[] args) {

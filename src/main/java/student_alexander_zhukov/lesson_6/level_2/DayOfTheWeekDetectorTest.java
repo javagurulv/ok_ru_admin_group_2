@@ -1,5 +1,8 @@
 package student_alexander_zhukov.lesson_6.level_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorTest {
 
     public static void main(String[] args) {

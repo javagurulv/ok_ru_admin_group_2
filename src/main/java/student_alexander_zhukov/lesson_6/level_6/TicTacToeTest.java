@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_6.level_6;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TicTacToeTest {
 
     public static void main(String[] args) {

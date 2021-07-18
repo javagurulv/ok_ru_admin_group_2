@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TicTacToe {
 
     public static void main(String[] args) {

@@ -1,5 +1,8 @@
 package student_alexander_zhukov.lesson_6.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FizzBuzzTest {
     public static void main(String[] args) {
         FizzBuzzTest testFB = new FizzBuzzTest();

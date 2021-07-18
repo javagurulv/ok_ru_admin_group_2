@@ -2,6 +2,9 @@ package student_alexander_zhukov.lesson_5.level_2;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CustomArray2 {
     public static void main(String[] args) {
         int[] myArray = new int[3];
