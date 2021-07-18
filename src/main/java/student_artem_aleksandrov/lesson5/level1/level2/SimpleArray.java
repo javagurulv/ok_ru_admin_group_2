@@ -7,6 +7,9 @@ package student_artem_aleksandrov.lesson5.level1.level2;
  */
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class SimpleArray {
     public static void main(String[] args) {
         Random random = new Random();

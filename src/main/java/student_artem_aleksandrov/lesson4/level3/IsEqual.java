@@ -1,7 +1,7 @@
 package student_artem_aleksandrov.lesson4.level3;
 
 import student_artem_aleksandrov.lesson4.GetNumbers;
-
+import teacher.codereview.CodeReview;
 
 /*
 Write a Java program that accepts three numbers and prints:
@@ -10,6 +10,7 @@ Write a Java program that accepts three numbers and prints:
 - "Neither all are equal or different" otherwise.
 
  */
+@CodeReview(approved = true)
 public class IsEqual {
     public static void main(String[] args) {
         int[] numbers = GetNumbers.getNumbers(3);

@@ -2,6 +2,9 @@ package student_artem_aleksandrov.lesson4.level2;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Max {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

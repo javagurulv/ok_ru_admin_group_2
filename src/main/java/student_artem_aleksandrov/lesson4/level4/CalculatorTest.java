@@ -1,5 +1,8 @@
 package student_artem_aleksandrov.lesson4.level4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest calculatorTest = new CalculatorTest();

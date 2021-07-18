@@ -16,6 +16,10 @@ class Calculator {
 }
 
  */
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Calculator {
 
     public int sum(int firstNumber, int secondNumber) {

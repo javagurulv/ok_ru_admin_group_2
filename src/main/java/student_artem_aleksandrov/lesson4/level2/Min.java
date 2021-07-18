@@ -1,7 +1,9 @@
 package student_artem_aleksandrov.lesson4.level2;
 
 import student_artem_aleksandrov.lesson4.GetNumbers;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Min {
 
     public static void main(String[] args) {

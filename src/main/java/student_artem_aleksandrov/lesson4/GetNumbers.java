@@ -2,6 +2,9 @@ package student_artem_aleksandrov.lesson4;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GetNumbers {
 
 

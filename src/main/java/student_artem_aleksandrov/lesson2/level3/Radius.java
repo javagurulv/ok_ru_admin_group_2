@@ -2,6 +2,9 @@ package student_artem_aleksandrov.lesson2.level3;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Radius {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

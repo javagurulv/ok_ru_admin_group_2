@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class RandomArray {
 
     public static void main(String[] args) {

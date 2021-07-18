@@ -2,6 +2,9 @@ package student_artem_aleksandrov.lesson3;
 
 import java.util.ArrayList;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class RobotDemo {
 
 

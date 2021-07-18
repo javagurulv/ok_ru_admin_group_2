@@ -1,6 +1,7 @@
 package student_artem_aleksandrov.lesson4.level3;
 
 import student_artem_aleksandrov.lesson4.GetNumbers;
+import teacher.codereview.CodeReview;
 
 /*
 Write a program that accepts three numbers from the user and prints:
@@ -22,6 +23,7 @@ class Calculator {
 - "Neither increasing or decreasing order" otherwise.
 
  */
+@CodeReview(approved = true)
 public class CheckOrder {
     public static void main(String[] args) {
         int[] numbers = GetNumbers.getNumbers(3);

@@ -1,7 +1,9 @@
 package student_artem_aleksandrov.lesson4.level3;
 
 import student_artem_aleksandrov.lesson4.GetNumbers;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Max {
     public static void main(String[] args) {
         int[] numbers = GetNumbers.getNumbers(3);
