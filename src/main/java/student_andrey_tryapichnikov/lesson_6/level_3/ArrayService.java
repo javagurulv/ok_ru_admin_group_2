@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_6.level_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ArrayService {
     void printArray(int[] numbers) {
         String value = "";

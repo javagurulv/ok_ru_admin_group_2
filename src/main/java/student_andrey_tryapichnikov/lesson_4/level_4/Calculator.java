@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_4.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Calculator {
     public static int sum(int numeroUno, int numeroDos) {
         return numeroUno + numeroDos;

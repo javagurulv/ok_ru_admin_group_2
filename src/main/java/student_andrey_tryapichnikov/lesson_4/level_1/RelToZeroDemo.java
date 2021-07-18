@@ -1,9 +1,11 @@
 package student_andrey_tryapichnikov.lesson_4.level_1;
 
 import student_andrey_tryapichnikov.boilerplate.ScannerQuery;
+import teacher.codereview.CodeReview;
 
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class RelToZeroDemo {
     static String status(int number) {
         if (RelToZero.isPositive(number)) return "positive";

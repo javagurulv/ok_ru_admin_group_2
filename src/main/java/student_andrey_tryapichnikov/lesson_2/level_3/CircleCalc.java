@@ -2,6 +2,9 @@ package student_andrey_tryapichnikov.lesson_2.level_3;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CircleCalc {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);

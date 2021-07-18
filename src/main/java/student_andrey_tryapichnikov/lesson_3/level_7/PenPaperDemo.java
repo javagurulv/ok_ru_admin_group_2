@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_3.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class PenPaperDemo {
     public static void main(String[] args) {
         var sheet = new Paper("sheet1", "A3");

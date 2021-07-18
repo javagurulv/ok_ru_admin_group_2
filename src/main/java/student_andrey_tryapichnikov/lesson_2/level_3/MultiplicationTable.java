@@ -2,6 +2,9 @@ package student_andrey_tryapichnikov.lesson_2.level_3;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class MultiplicationTable {
     static final int[] MULTIPLIERS = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     public static void main(String[] args) {

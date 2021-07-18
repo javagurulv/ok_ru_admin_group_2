@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_3.level_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Robot {
     String name;
     String color;

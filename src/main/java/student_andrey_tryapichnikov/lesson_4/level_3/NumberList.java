@@ -1,8 +1,11 @@
 package student_andrey_tryapichnikov.lesson_4.level_3;
 
+import teacher.codereview.CodeReview;
+
 // it is a slightly more complex thing than was assigned, but ultimately does the same
 // the main difference is that it is not confined to only three values:
 // you can use as many as you like
+@CodeReview(approved = true)
 public class NumberList {
     int[] values;
     int[] stat;

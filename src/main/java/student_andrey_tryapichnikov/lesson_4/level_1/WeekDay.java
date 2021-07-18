@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_4.level_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class WeekDay {
     public static String getDayName(int daynumber) {
         String day;

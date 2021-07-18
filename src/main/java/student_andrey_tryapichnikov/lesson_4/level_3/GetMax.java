@@ -6,6 +6,10 @@ package student_andrey_tryapichnikov.lesson_4.level_3;
 
 // sadly I only know how to do slices in Python, so there is one meaningless operation
 // of testing the first value against itself
+
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class GetMax {
     static int getMax(int[] numbers) {
         int maxNum = numbers[0];

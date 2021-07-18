@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_4.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class LeapYearTest {
     public static void main(String[] args) {
         leapYearTest(2000);

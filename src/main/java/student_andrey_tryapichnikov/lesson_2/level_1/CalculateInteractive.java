@@ -3,10 +3,12 @@ import student_andrey_tryapichnikov.lesson_1.Addition;
 import student_andrey_tryapichnikov.lesson_1.Division;
 import student_andrey_tryapichnikov.lesson_1.Multiplication;
 import student_andrey_tryapichnikov.lesson_1.Subtraction;
+import teacher.codereview.CodeReview;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
+@CodeReview(approved = true)
 public class CalculateInteractive {
     static final String RESULT_FMT = "%s equals: %s\n";
     static final String[] OPERATIONS = {"add", "sub", "mul", "div", "all"};

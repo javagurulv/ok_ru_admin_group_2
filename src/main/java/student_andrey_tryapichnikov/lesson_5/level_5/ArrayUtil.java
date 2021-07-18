@@ -2,6 +2,9 @@ package student_andrey_tryapichnikov.lesson_5.level_5;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ArrayUtil {
     public int[] createArray(int arrayLength) {
         return new int[arrayLength];

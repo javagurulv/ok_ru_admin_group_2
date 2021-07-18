@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_5.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ArrayUtilTest {
     ArrayUtil arrayUtil = new ArrayUtil();
     public static void main(String[] args) {

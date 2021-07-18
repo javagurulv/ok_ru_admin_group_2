@@ -2,6 +2,9 @@ package student_andrey_tryapichnikov.lesson_2.level_2;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class LoginService {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);

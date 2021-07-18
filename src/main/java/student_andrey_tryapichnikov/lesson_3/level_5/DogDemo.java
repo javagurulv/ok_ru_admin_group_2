@@ -1,5 +1,8 @@
 package student_andrey_tryapichnikov.lesson_3.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class DogDemo {
     public static void main(String[] args) {
         var dogName = "Fido";
