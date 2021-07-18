@@ -1,9 +1,7 @@
 package student_andrey_tryapichnikov.lesson_4.level_1;
 
-import student_andrey_tryapichnikov.boilerplate.ScannerQuery;
+import student_andrey_tryapichnikov.boilerplate.BoilerplateStatic;
 import teacher.codereview.CodeReview;
-
-import java.util.Scanner;
 
 @CodeReview(approved = true)
 public class RelToZeroDemo {
@@ -14,7 +12,7 @@ public class RelToZeroDemo {
     }
 
     public static void main(String[] args) {
-        var value = ScannerQuery.queryNumberDefault(1)[0];
+        var value = BoilerplateStatic.queryNumberDefault(1)[0];
 
         var status = status(value);
         System.out.printf("The number %s is %s!\n", value, status);
