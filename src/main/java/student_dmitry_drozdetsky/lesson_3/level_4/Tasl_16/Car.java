@@ -1,5 +1,8 @@
 package student_dmitry_drozdetsky.lesson_3.level_4.Tasl_16;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Car {
     String model;
 

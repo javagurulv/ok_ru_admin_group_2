@@ -1,5 +1,8 @@
 package student_dmitry_drozdetsky.lesson_3.level_3.Task_11;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class RoboDemo {
     public static void main(String[] args) {
 
