@@ -2,7 +2,9 @@ package student_alexey_krenev.lesson_5.level_2;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class Task_15_IncreaseArray {
 
     public static void main(String[] args) {

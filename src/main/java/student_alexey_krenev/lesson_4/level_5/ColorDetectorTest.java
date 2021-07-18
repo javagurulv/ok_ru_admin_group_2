@@ -1,6 +1,8 @@
 package student_alexey_krenev.lesson_4.level_5;
 
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 public class ColorDetectorTest {
 
     public static void main(String[] args) {

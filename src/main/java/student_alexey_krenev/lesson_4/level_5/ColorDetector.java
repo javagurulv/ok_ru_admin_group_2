@@ -1,5 +1,8 @@
 package student_alexey_krenev.lesson_4.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ColorDetector {
 
     public String detector(int wavelength){

@@ -2,6 +2,9 @@ package student_alexey_krenev.lesson_5.level_4;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Task29_Even {
 
     public static void main(String[] args) {
