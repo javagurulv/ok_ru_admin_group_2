@@ -3,7 +3,7 @@ package student_sergo_kurbanov.lesson_7.level_4;
 public class Circle extends Shape {
     double radius;
 
-    Circle(String title, double radius) {
+    public Circle(String title, double radius) {
         super(title);
         this.radius = radius;
     }
