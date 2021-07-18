@@ -2,6 +2,9 @@ package student_alexander_fateev.lesson5.level_2.task11;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class IntUserArray {
     public static void main(String[] args) {
         int [] numbers = new int[3];

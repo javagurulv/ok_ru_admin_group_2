@@ -1,8 +1,16 @@
 package student_alexander_fateev.lesson4.level_6.task17;
 
-import student_dmitry_drozdetsky.lesson_2.level_5.PrintText;
+import teacher.codereview.CodeReviewComment;
 
+// remove unused imports
+import student_dmitry_drozdetsky.lesson_2.level_5.PrintText;
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StockTest {
+
+
+	@CodeReviewComment(teacher = "В тесте для каждого сценария делайте отдельный метод.")
     public static void main(String[] args) {
 
         //Scenario 1: Изменение цены акции: 999  = Максимальная цена за указанный период: 999

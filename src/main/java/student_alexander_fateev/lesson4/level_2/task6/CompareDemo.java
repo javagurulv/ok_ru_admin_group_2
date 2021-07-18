@@ -2,6 +2,9 @@ package student_alexander_fateev.lesson4.level_2.task6;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CompareDemo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson4.level_6.task17;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StockDemo {
     public static void main(String[] args) {
         Stock mrg = new Stock("MailRU Group", 100);

@@ -2,6 +2,9 @@ package student_alexander_fateev.lesson4.level_4.task11;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CalculatorDemo {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

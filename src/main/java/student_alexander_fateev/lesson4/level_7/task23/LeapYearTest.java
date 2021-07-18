@@ -1,6 +1,12 @@
 package student_alexander_fateev.lesson4.level_7.task23;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class LeapYearTest {
+
+	@CodeReviewComment(teacher = "В тесте для каждого сценария делайте отдельный метод.")
     public static void main(String[] args) {
 
         // Test case 1: Если год не делится на 4, значит он обычный.

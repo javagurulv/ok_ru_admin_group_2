@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson4.level_7.task22;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FizzBuzz {
     String detect(int number) {
         if ((number %3 == 0) && (number %5 == 0)) {

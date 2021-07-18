@@ -1,6 +1,12 @@
 package student_alexander_fateev.lesson4.level_7.task22;
 
+import teacher.codereview.CodeReview;
+import teacher.codereview.CodeReviewComment;
+
+@CodeReview(approved = true)
 class FizzBuzzTest {
+
+	@CodeReviewComment(teacher = "В тесте для каждого сценария делайте отдельный метод.")
     public static void main(String[] args) {
         FizzBuzz testBuzz = new FizzBuzz();
 

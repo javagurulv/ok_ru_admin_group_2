@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson4.level_7.task23;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class LeapYear {
     boolean isLeapYear(int year) {
         if (year %4 != 0) {

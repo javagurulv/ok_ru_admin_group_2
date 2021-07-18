@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson4.level_7.task24;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CalculatorTest {
     public static void main(String[] args) {
         CalculatorTest calculatorTest = new CalculatorTest();

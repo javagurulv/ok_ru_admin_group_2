@@ -1,5 +1,8 @@
 package student_alexander_fateev.lesson4.level_2.task7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Compare {
     int firstNumber, secondNumber;
 
