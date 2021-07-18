@@ -2,6 +2,7 @@ package student_dmitry_samsonov.lesson_4.level_4_junior;
 
 import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
+import teacher.codereview.CodeReviewStudentAnswer;
 
 @CodeReview(approved = true)
 class Calculator {
@@ -28,8 +29,8 @@ class Calculator {
         return maxNumber;
     }
 
-    @CodeReviewComment(teacher = "findMaxNumber() - название метода должно содержать глагол")
-    int biggest(int number1, int number2, int number3) {
+    @CodeReviewComment(teacher = "findMaxNumber() - название метода должно содержать глагол", student = "переименовал")
+    int findMaxNumber(int number1, int number2, int number3) {
         int biggest = number1;
         if (number2 > biggest){
             biggest = number2;
