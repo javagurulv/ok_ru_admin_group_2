@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ArrayToConsoleWithScanner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

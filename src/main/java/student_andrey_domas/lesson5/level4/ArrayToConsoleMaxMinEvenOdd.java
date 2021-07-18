@@ -2,9 +2,12 @@ package student_andrey_domas.lesson5.level4;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.function.IntPredicate;
-import java.util.stream.IntStream;
+import java.util.function.IntPredicate;  // Remove unused imports
+import java.util.stream.IntStream;      // Remove unused imports
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ArrayToConsoleMaxMinEvenOdd {
 
     final static int MAX = 5;

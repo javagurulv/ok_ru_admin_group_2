@@ -1,11 +1,13 @@
 package student_andrey_domas.lesson6.level3;
 
 import student_sergo_kurbanov.lesson_5.level_5.ArrayUtil;
+import teacher.codereview.CodeReview;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+@CodeReview(approved = true)
 public class ArrayService {
 
     private static int getFirstOccurrenceIndex(int[] arr, int numberToSearch) {

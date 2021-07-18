@@ -3,6 +3,9 @@ package student_andrey_domas.lesson6.level5;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TicTacToe {
 
     public Move getNextMove() {

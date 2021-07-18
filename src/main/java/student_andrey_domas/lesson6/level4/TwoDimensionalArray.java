@@ -3,6 +3,9 @@ package student_andrey_domas.lesson6.level4;
 import java.util.Arrays;
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TwoDimensionalArray {
     public static void main(String[] args) {
 
