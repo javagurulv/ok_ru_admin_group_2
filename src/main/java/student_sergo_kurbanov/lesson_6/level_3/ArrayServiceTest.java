@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_6.level_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ArrayServiceTest {
     public static void main(String[] args) {
         ArrayServiceTest test = new ArrayServiceTest();

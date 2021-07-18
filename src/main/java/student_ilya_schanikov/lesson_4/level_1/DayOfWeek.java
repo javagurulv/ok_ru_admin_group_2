@@ -2,6 +2,9 @@ package student_ilya_schanikov.lesson_4.level_1;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfWeek {
     public static void main(String[] args) {
         int number;

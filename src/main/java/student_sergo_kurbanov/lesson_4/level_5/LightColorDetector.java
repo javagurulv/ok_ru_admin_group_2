@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_4.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class LightColorDetector {
     public enum Colors {
         VIOLET,

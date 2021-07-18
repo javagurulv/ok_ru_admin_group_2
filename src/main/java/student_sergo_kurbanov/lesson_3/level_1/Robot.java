@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_3.level_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Robot {
     Robot() {
     }

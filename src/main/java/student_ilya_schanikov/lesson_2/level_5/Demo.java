@@ -1,5 +1,8 @@
 package student_ilya_schanikov.lesson_2.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Demo {
     public static void main(String[] args) {
         System.out.println("I'll show you, how to use System.out ");

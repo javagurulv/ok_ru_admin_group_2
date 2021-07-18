@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_3.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class EmployeeDemo {
     public static void main(String[] args) {
         Employee emp = new Employee(493, "15.04.2020", "8765/39", 250);

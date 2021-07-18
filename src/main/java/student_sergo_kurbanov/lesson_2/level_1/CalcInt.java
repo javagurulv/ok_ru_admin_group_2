@@ -2,6 +2,9 @@ package student_sergo_kurbanov.lesson_2.level_1;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class CalcInt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

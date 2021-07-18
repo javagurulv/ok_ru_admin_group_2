@@ -2,6 +2,9 @@ package student_ilya_schanikov.lesson_4.level_6;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Stock {
     String stockName;
     int currentPrice;

@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_5.level_2;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class PrintArray {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3};

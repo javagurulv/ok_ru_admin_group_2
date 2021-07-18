@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_3.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Computer {
 
     String manufacturer;

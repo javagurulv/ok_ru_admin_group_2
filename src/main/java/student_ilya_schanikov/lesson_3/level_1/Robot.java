@@ -1,5 +1,8 @@
 package student_ilya_schanikov.lesson_3.level_1;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Robot {
     String name;
     public void sayHello() {

@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_3.level_4;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class BankAccountDemo {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount("Sergo", "Kurbanov", 1000000);

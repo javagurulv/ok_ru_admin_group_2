@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_4.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class FizzBuzzTest {
     public static void main(String[] args) {
         FizzBuzzTest fizzBuzzTest = new FizzBuzzTest();

@@ -2,6 +2,9 @@ package student_ilya_schanikov.lesson_3.level_5;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Dog {
     String name;
     int age;

@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_4.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class LeapYear {
     public boolean isLeapYear(int year) {
         // Если год не делится на 4, значит он обычный.

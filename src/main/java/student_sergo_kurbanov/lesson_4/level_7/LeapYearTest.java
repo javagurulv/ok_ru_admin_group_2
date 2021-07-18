@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_4.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class LeapYearTest {
     public static void main(String[] args) {
         LeapYearTestByYear("1. (year   % 4 != 0)", 2001, false);

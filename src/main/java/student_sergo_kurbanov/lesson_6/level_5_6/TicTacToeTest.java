@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_6.level_5_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TicTacToeTest {
     public static void main(String[] args) {
         TicTacToeTest ticTacToe = new TicTacToeTest();

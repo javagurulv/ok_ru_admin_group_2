@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_4.level_6;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Stock {
     String companyName;
     int currentPrice;

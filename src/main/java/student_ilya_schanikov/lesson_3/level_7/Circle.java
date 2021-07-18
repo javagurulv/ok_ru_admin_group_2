@@ -2,6 +2,9 @@ package student_ilya_schanikov.lesson_3.level_7;
 
 import java.lang.Math;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Circle {
     double radius;
     public Circle(double radiusSize) {

@@ -3,6 +3,9 @@ package student_sergo_kurbanov.lesson_6.level_5_6;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class TicTacToe {
     public int[][] createField() {
         return new int[][]{

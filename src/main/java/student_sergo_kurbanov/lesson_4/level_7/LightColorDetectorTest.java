@@ -1,7 +1,9 @@
 package student_sergo_kurbanov.lesson_4.level_7;
 
 import student_sergo_kurbanov.lesson_4.level_5.LightColorDetector;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class LightColorDetectorTest {
     public static void main(String[] args) {
 

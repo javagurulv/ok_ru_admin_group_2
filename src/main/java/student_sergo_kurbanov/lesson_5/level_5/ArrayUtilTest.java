@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_5.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class ArrayUtilTest {
     public static void main(String[] args) {
         ArrayUtilTest test = new ArrayUtilTest();

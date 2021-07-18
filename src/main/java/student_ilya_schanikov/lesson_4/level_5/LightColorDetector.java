@@ -1,5 +1,8 @@
 package student_ilya_schanikov.lesson_4.level_5;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class LightColorDetector {
     public String detect(int wavelength) {
         String lightColor;

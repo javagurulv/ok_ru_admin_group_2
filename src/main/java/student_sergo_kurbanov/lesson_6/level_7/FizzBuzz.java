@@ -1,5 +1,8 @@
 package student_sergo_kurbanov.lesson_6.level_7;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class FizzBuzz {
     public String detect(int number) {
         boolean mod3 = (number % 3 == 0);
