@@ -1,7 +1,9 @@
 package student_dmitry_samsonov.lesson_3.level_2_intern;
 
 import student_dmitry_samsonov.lesson_2.level_2.HelloPerson;
+import teacher.codereview.CodeReview;
 
+@CodeReview(approved = true)
 class Name {
     public static void main(String[] args) {
         String myName = "Dmitry";

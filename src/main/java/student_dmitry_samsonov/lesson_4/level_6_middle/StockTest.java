@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_4.level_6_middle;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class StockTest {
     public static void main(String[] args) {
         Stock google = new Stock("GOOG", 10);

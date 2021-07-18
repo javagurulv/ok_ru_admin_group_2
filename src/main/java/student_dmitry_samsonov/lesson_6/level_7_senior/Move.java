@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_6.level_7_senior;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Move {
     private int x;
     private int y;

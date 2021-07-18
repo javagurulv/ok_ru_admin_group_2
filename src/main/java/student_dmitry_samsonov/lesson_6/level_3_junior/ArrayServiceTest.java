@@ -1,9 +1,11 @@
 package student_dmitry_samsonov.lesson_6.level_3_junior;
 
 import student_dmitry_samsonov.lesson_5.level_2_intern.Array;
+import teacher.codereview.CodeReview;
 
 import java.util.Arrays;
 
+@CodeReview(approved = true)
 class ArrayServiceTest {
     public static void main(String[] args) {
         ArrayService arrayService = new ArrayService();

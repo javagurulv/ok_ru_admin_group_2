@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_7.level_4_junior;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Rectangle extends Shape{
     private int side1;
     private int side2;

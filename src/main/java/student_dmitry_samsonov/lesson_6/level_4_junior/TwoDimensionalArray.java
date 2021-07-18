@@ -2,6 +2,9 @@ package student_dmitry_samsonov.lesson_6.level_4_junior;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TwoDimensionalArray {
     public int[] createArray(int arrayLength) {
         int[] arr = new int[arrayLength];

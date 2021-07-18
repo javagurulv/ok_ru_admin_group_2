@@ -2,6 +2,9 @@ package student_dmitry_samsonov.lesson_4.level_2_intern;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CompareTwoNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

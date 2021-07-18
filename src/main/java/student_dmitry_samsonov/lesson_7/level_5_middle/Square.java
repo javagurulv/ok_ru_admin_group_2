@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_7.level_5_middle;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Square extends Shape {
     private int side;
 

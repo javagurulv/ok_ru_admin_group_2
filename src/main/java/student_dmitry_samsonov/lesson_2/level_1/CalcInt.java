@@ -1,6 +1,9 @@
 package student_dmitry_samsonov.lesson_2.level_1;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class CalcInt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_4.level_7_senior;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class LightColorDetectorTest {
     public static void main(String[] args) {
         LightColorDetectorTest lightColorDetectorTest = new LightColorDetectorTest();

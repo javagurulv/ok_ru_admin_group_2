@@ -3,6 +3,9 @@ package student_dmitry_samsonov.lesson_5.level_4_junior;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UserRandArray {
     public static void main(String[] args) {
         Scanner ask = new Scanner(System.in);

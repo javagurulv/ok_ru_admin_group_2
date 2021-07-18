@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_6.level_2_intern;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class DayOfTheWeekDetectorTest {
     public static void main(String[] args) {
         printTestResult("1", testFindDayOfTheWeek(1).equals("Monday"));

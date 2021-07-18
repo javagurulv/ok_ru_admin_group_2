@@ -3,6 +3,9 @@ package student_dmitry_samsonov.lesson_6.level_7_senior;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TicTacToe {
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck){
         boolean win;

@@ -2,6 +2,9 @@ package student_dmitry_samsonov.lesson_6.level_7_senior;
 
 import java.util.Arrays;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class TicTacToeTest {
     public static void main(String[] args) {
         TicTacToeTest ticTacToeTest = new TicTacToeTest();

@@ -1,5 +1,7 @@
 package student_dmitry_samsonov.lesson_7.level_3_junior;
 
+import teacher.codereview.CodeReview;
+
 /*
     Напишите ответы на вопросы тут.
 
@@ -9,6 +11,7 @@ package student_dmitry_samsonov.lesson_7.level_3_junior;
     Можно ли создать экземпляр абстрактного класса в момент выполнения программы?
     Нет
 */
+@CodeReview(approved = true)
 abstract class AbstractClass {
 
 }

@@ -2,6 +2,9 @@ package student_dmitry_samsonov.lesson_5.level_4_junior;
 
 import java.util.Random;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class RandArray {
     public static void main(String[] args) {
         Random rnd = new Random();

@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_5.level_3_junior;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ForLoopDefinition4 {
 
     public static void main(String[] args) {

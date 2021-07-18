@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_3.level_1_intern;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class RobotDemo {
     public static void main(String[] args) {
         Robot robot = new Robot();

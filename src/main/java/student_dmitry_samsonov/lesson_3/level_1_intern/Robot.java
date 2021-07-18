@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_3.level_1_intern;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Robot {
     String name = "Marvin the Paranoid Android";
     Robot() {

@@ -3,6 +3,9 @@ package student_dmitry_samsonov.lesson_5.level_2_intern;
 import java.util.Random;
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Array {
     public static void main(String[] args) {
         int[] arr = new int[3];

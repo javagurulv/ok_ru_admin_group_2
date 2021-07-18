@@ -1,5 +1,8 @@
 package student_dmitry_samsonov.lesson_5.level_6_middle;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class ArrayUtil {
     public int[] createArray(int arrayLength) {
         int[] arr = new int[arrayLength];

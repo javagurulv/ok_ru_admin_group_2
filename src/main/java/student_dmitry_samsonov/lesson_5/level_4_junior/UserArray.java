@@ -2,6 +2,9 @@ package student_dmitry_samsonov.lesson_5.level_4_junior;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UserArray {
     public static void main(String[] args) {
         Scanner ask = new Scanner(System.in);

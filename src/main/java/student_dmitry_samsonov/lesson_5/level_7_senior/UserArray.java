@@ -2,6 +2,9 @@ package student_dmitry_samsonov.lesson_5.level_7_senior;
 
 import java.util.Scanner;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class UserArray {
     public static void main(String[] args) {
         ArrayUtil arrayUtil = new ArrayUtil();
