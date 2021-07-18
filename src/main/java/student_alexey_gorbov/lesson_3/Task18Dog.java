@@ -1,5 +1,8 @@
 package student_alexey_gorbov.lesson_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 class Task18Dog {
     String name;
     Integer age;

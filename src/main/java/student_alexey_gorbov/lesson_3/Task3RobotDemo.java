@@ -1,5 +1,8 @@
 package student_alexey_gorbov.lesson_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Task3RobotDemo {
     public static void main(String[] args) {
         Task1Robot robot = new Task1Robot();

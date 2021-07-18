@@ -1,5 +1,8 @@
 package student_alexey_gorbov.lesson_3;
 
+import teacher.codereview.CodeReview;
+
+@CodeReview(approved = true)
 public class Task18DogDemo {
     public static void main(String[] args) {
         Task18Dog dog = new Task18Dog("T100");
