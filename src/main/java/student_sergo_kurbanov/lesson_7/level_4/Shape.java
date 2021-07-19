@@ -1,6 +1,6 @@
 package student_sergo_kurbanov.lesson_7.level_4;
 
-abstract class Shape {
+public abstract class Shape {
 
     private String title;
 
@@ -8,7 +8,7 @@ abstract class Shape {
         this.title = title;
     }
 
-    abstract double calculateArea();
+    public abstract double calculateArea();
 
-    abstract double calculatePerimeter();
+    public abstract double calculatePerimeter();
 }
