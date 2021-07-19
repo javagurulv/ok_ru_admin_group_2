@@ -6,6 +6,8 @@ import java.util.List;
 
 public class ListExample {
 
+	// Java Collections Framework
+
 	public static void main(String[] args) {
 
 		// int, long, double, float, boolean
@@ -14,6 +16,9 @@ public class ListExample {
 		Long nuberL = Long.parseLong("3");
 
 		List<Integer> numbers = new ArrayList<>();
+		List<Integer> numbersv2 = new LinkedList<>();
+
+
 
 		System.out.println("List length = " + numbers.size());
 		System.out.println("List isEmpty = " + numbers.isEmpty());
@@ -35,6 +40,8 @@ public class ListExample {
 		numbers.add(777);
 		numbers.add(777);
 		numbers.add(777);
+
+		numbers.contains(777);
 
 		for (int i = 0; i < numbers.size(); i++) {
 			Integer number = numbers.get(i);
@@ -62,8 +69,12 @@ public class ListExample {
 
 		List<String> words = new LinkedList<>();
 
+		words.add("1212");
+
 		boolean contains3 = numbers.contains(3);
 		System.out.println("Contains 3 = " + contains3);
+
+		words.sort(String.CASE_INSENSITIVE_ORDER);
 
 	}
 

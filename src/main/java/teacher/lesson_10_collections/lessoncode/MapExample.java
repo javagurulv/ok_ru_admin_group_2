@@ -12,6 +12,7 @@ public class MapExample {
 		// 2 - remove
 		// 3 - find
 		// 4 - exit
+		// 5 - exit
 
 		// key (String) - value (Integer)
 		// cat - 5

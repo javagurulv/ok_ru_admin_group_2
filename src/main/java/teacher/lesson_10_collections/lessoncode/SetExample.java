@@ -21,6 +21,7 @@ public class SetExample extends Object {
 		authors.add("C2");
 		authors.add("C3");
 		authors.add("C4");
+		authors.add("C4");
 
 		for (String author : authors) {
 			System.out.println(author);
