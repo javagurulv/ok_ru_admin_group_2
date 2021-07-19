@@ -124,7 +124,7 @@ class CalculatorTest {
         int thirdNumber = 7;
         int expectedResult = 20;
         Calculator calculator = new Calculator();
-        int realResult = calculator.biggest(firstNumber, secondNumber, thirdNumber);
+        int realResult = calculator.findMaxNumber(firstNumber, secondNumber, thirdNumber);
         if (realResult == expectedResult) {
             System.out.println("Biggest test first is bigger = OK");
         } else {
@@ -137,7 +137,7 @@ class CalculatorTest {
         int thirdNumber = 7;
         int expectedResult = 20;
         Calculator calculator = new Calculator();
-        int realResult = calculator.biggest(firstNumber, secondNumber, thirdNumber);
+        int realResult = calculator.findMaxNumber(firstNumber, secondNumber, thirdNumber);
         if (realResult == expectedResult) {
             System.out.println("Biggest test second is bigger = OK");
         } else {
@@ -150,7 +150,7 @@ class CalculatorTest {
         int thirdNumber = 20;
         int expectedResult = 20;
         Calculator calculator = new Calculator();
-        int realResult = calculator.biggest(firstNumber, secondNumber, thirdNumber);
+        int realResult = calculator.findMaxNumber(firstNumber, secondNumber, thirdNumber);
         if (realResult == expectedResult) {
             System.out.println("Biggest test third is bigger = OK");
         } else {
@@ -163,7 +163,7 @@ class CalculatorTest {
         int thirdNumber = 7;
         int expectedResult = 10;
         Calculator calculator = new Calculator();
-        int realResult = calculator.biggest(firstNumber, secondNumber, thirdNumber);
+        int realResult = calculator.findMaxNumber(firstNumber, secondNumber, thirdNumber);
         if (realResult == expectedResult) {
             System.out.println("Biggest test first two are bigger = OK");
         } else {
@@ -176,7 +176,7 @@ class CalculatorTest {
         int thirdNumber = 10;
         int expectedResult = 10;
         Calculator calculator = new Calculator();
-        int realResult = calculator.biggest(firstNumber, secondNumber, thirdNumber);
+        int realResult = calculator.findMaxNumber(firstNumber, secondNumber, thirdNumber);
         if (realResult == expectedResult) {
             System.out.println("Biggest test second two are bigger = OK");
         } else {
@@ -189,7 +189,7 @@ class CalculatorTest {
         int thirdNumber = 10;
         int expectedResult = 10;
         Calculator calculator = new Calculator();
-        int realResult = calculator.biggest(firstNumber, secondNumber, thirdNumber);
+        int realResult = calculator.findMaxNumber(firstNumber, secondNumber, thirdNumber);
         if (realResult == expectedResult) {
             System.out.println("Biggest test all are equal = OK");
         } else {
