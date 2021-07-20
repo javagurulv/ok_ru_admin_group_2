@@ -4,19 +4,19 @@ public class Rectangle extends Shape {
     double width;
     double height;
 
-    Rectangle(String title, double width, double height) {
+    public Rectangle(String title, double width, double height) {
         super(title);
         this.width = width;
         this.height = height;
     }
 
     @Override
-    double calculateArea() {
+    public double calculateArea() {
         return width * height;
     }
 
     @Override
-    double calculatePerimeter() {
+    public double calculatePerimeter() {
         return (width + height) * 2;
     }
 }

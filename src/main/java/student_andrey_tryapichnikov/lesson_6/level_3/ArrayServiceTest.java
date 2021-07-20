@@ -22,6 +22,7 @@ public class ArrayServiceTest {
         arrayServiceStatic.printArray(testArray2);
         int[] testArray3 = {1342, 12, 4819, 234, 531, 801};
         test.testInverted(testArray3);
+        test.testSort(testArray3);
     }
 
     void testContains(int[] numbers, int number) {
@@ -45,6 +46,14 @@ public class ArrayServiceTest {
     void testInverted(int[] numbers) {
         arrayService.printArray(numbers);
         arrayService.invert(numbers);
+        arrayService.printArray(numbers);
+    }
+
+    void testSort(int[] numbers) {
+        System.out.print("Unsorted: ");
+        arrayService.printArray(numbers);
+        arrayService.sort(numbers);
+        System.out.print("Sorted: ");
         arrayService.printArray(numbers);
     }
 }

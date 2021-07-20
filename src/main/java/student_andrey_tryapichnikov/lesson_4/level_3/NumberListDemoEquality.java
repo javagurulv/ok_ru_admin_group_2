@@ -1,12 +1,12 @@
 package student_andrey_tryapichnikov.lesson_4.level_3;
 
-import student_andrey_tryapichnikov.boilerplate.ScannerQuery;
+import student_andrey_tryapichnikov.boilerplate.BoilerplateStatic;
 import teacher.codereview.CodeReview;
 
 @CodeReview(approved = true)
 public class NumberListDemoEquality {
     public static void main(String[] args) {
-        var numbers = ScannerQuery.queryNumberDefault(3);
+        var numbers = BoilerplateStatic.queryNumberDefault(3);
         var numberList = new NumberList(numbers);
 
         switch (numberList.relationText) {
