@@ -21,6 +21,10 @@ public class TicTacToeTest {
         testField[0][0] = 0;
         testDia(testField, 1);
         testDia(testField, 0);
+        testField[0][2] = 1;
+        testField[1][0] = -1;
+        testField[1][1] = 1;
+        testField[2][0] = 1;
         testAny(testField, 1);
     }
     static void testHor(int[][] field, int player) {

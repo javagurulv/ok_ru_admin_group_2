@@ -33,7 +33,7 @@ public class TicTacToe {
             var lineString = new StringBuilder();
             for (int value: line) {
                 switch (value) {
-                    case -1 -> lineString.append("  ");
+                    case -1 -> lineString.append(". ");
                     case 0 -> lineString.append("x ");
                     case 1 -> lineString.append("o ");
                 }
