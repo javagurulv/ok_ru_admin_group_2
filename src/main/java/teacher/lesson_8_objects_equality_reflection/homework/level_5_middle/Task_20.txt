@@ -1,0 +1,20 @@
+Добавьте в класс ReflectionUtil метод:
+
+public String getSuperClassName(String fullClassName) {
+    // реализуйте этот метод
+}
+
+На вход этот метод принимает полный путь к классу вместе с пакетом,
+например ok.ru.java.ServerState, а в качестве результата возвращает
+название класса родителя.
+
+Для решения задачи воспользуйтесь методом getSuperclass() у
+инстанции класса Class.
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSuperclass--
+
+А для получения названия класса можно воспользоваться методом getName()
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getName--
+
+
+В классе ReflectionUtilTest напишите тесты для метода
+getSuperClassName().

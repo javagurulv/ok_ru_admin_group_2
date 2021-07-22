@@ -1,0 +1,30 @@
+Добавьте в класс ReflectionUtil метод:
+
+public void printClassConstructors(String fullClassName) {
+    // реализуйте этот метод
+}
+
+На вход этот метод принимает полный путь к классу вместе с пакетом,
+например ok.ru.java.ServerState, а в качестве результата печатает
+на консоль список конструкторов класса, их типы параметров и модификаторы доступа.
+
+class Dog {
+
+    private Dog() {}
+
+    public Dog(String color) {}
+
+}
+
+
+Constructor 1
+Modifier: private
+Parameter Types:
+
+Constructor 2
+Modifier: public
+Parameter Types: java.lang.String
+
+Для решения задачи воспользуйтесь методом getDeclaredConstructors() у
+инстанции класса Class:
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredConstructors--

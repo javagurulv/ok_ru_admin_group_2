@@ -1,0 +1,35 @@
+Добавьте в класс ReflectionUtil метод:
+
+public void printClassMethods(String fullClassName) {
+    // реализуйте этот метод
+}
+
+На вход этот метод принимает полный путь к классу вместе с пакетом,
+например ok.ru.java.ServerState, а в качестве результата печатает
+на консоль названия методов, их параметры, возвращаемый тип данных
+и модификатор доступа.
+
+class Dog {
+
+  public void display() {
+    System.out.println("I am a dog.");
+  }
+
+  private void makeSound() {
+    System.out.println("Bark Bark");
+  }
+}
+
+
+Method Name: display
+Modifier: public
+Return Types: void
+
+Method Name: makeSound
+Modifier: private
+Return Types: void
+
+
+Для решения задачи воспользуйтесь методом getDeclaredMethods() у
+инстанции класса Class:
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredMethods--

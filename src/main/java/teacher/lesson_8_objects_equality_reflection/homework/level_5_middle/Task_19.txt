@@ -1,0 +1,23 @@
+Создайте класс ReflectionUtil.
+
+Добавьте в класс ReflectionUtil метод:
+
+public String getClassAccessModifier(String fullClassName) {
+    // реализуйте этот метод
+}
+
+На вход этот метод принимает полный путь к классу вместе с пакетом,
+например ok.ru.java.ServerState, а в качестве результата возвращает
+название модификатора доступа класса в виде строки.
+
+Для решения задачи воспользуйтесь методом getModifiers() у
+инстанции класса Class.
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getModifiers--
+
+А для конвертации результата метода getModifiers()
+в строку воспользуйтесь классом java.lang.reflect.Modifier
+и его методом: toString(int)
+https://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Modifier.html#toString(int)--
+
+Создайте класс ReflectionUtilTest и напишите тесты для метода
+getClassAccessModifier().

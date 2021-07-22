@@ -1,0 +1,20 @@
+Добавьте в класс ReflectionUtil метод:
+
+public Object createClassInstanceUsingDefaultConstructor(String fullClassName) {
+    // реализуйте этот метод
+}
+
+На вход этот метод принимает полный путь к классу вместе с пакетом,
+например ok.ru.java.ServerState, а в качестве результата возвращает
+созданный объект данного класса при помощи конструктора по умолчанию.
+
+class Dog {
+
+    public Dog() {}
+
+}
+
+
+Для решения задачи воспользуйтесь методом newInstance() у
+инстанции класса Class:
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#newInstance--

@@ -1,0 +1,28 @@
+Добавьте в класс ReflectionUtil метод:
+
+public void printClassFields(String fullClassName) {
+    // реализуйте этот метод
+}
+
+На вход этот метод принимает полный путь к классу вместе с пакетом,
+например ok.ru.java.ServerState, а в качестве результата печатает
+на консоль названия свойств, их типы данных и модификатор доступа.
+
+class Dog {
+    public String color;
+    private String name;
+}
+
+
+Field Name: color
+Modifier: public
+Type: java.lang.String
+
+Field Name: name
+Modifier: private
+Type: java.lang.String
+
+
+Для решения задачи воспользуйтесь методом getDeclaredFields() у
+инстанции класса Class:
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getDeclaredFields--
