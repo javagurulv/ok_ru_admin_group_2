@@ -1,10 +1,10 @@
 package student_andrey_tryapichnikov.lesson_7.level_5;
 
 public class Rectangle extends Shape {
-    private int sideA;
-    private int sideB;
+    private final int sideA;
+    private final int sideB;
 
-    Rectangle(int sideA, int sideB) {
+    public Rectangle(int sideA, int sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
     }

@@ -1,9 +1,9 @@
 package student_andrey_tryapichnikov.lesson_7.level_5;
 
 public class Circle extends Shape {
-    private int radius;
+    private final int radius;
 
-    Circle(int radius) {
+    public Circle(int radius) {
         this.radius = radius;
     }
 

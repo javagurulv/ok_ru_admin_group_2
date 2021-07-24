@@ -1,9 +1,9 @@
 package student_andrey_tryapichnikov.lesson_7.level_5;
 
 public class Triangle extends Shape {
-    private int side;
+    private final int side;
 
-    Triangle(int side) {
+    public Triangle(int side) {
         this.side = side;
     }
 
