@@ -3,11 +3,9 @@ package student_andrey_tryapichnikov.lesson_8.level_6;
 import java.lang.reflect.*;
 
 class ReflectionUtil {
-    private static void printBeautifully(int color, String[] headers, String[] data) {
-        // asserts don't work without -ea in runtime, wtf?!
-        assert (headers.length == data.length);
-        for (int i = 0; i < headers.length; i++) {
-            System.out.printf("\033[3%sm%s:\033[39m %s\n", color, headers[i], data[i]);
+    private static void printBeautifully(int color, String[][] dataMap) {
+        for (int i = 0; i < dataMap[0].length; i++) {
+            System.out.printf("\033[3%sm%s:\033[39m %s\n", color, dataMap[0][i], dataMap[1][i]);
         }
         System.out.println();
     }
@@ -42,15 +40,16 @@ class ReflectionUtil {
 
     public void printClassMethods(String fullClassName) {
         final String[] headers = {"Method Name", "Modifier", "Return Types"};
-        var data = new String[headers.length];
+        var dataMap = new String[2][headers.length];
+        dataMap[0] = headers;
         try {
             var reflectedClass = Class.forName(fullClassName);
             var declaredMethods = reflectedClass.getDeclaredMethods();
             for (Method m: declaredMethods) {
-                data[0] = m.getName();
-                data[1] = Modifier.toString(m.getModifiers());
-                data[2] = m.getReturnType().toString();
-                printBeautifully(3, headers, data);
+                dataMap[1][0] = m.getName();
+                dataMap[1][1] = Modifier.toString(m.getModifiers());
+                dataMap[1][2] = m.getReturnType().toString();
+                printBeautifully(3, dataMap);
             }
         } catch (ClassNotFoundException e) {
             System.out.printf("%s\n\n", e);
@@ -59,15 +58,16 @@ class ReflectionUtil {
 
     public void printClassFields(String fullClassName) {
         final String[] headers = {"Field Name", "Modifier", "Type"};
-        var data = new String[headers.length];
+        var dataMap = new String[2][headers.length];
+        dataMap[0] = headers;
         try {
             var reflectedClass = Class.forName(fullClassName);
             var declaredFields = reflectedClass.getDeclaredFields();
             for (Field f: declaredFields) {
-                data[0] = f.getName();
-                data[1] = Modifier.toString(f.getModifiers());
-                data[2] = f.getType().getName();
-                printBeautifully(3, headers, data);
+                dataMap[1][0] = f.getName();
+                dataMap[1][1] = Modifier.toString(f.getModifiers());
+                dataMap[1][2] = f.getType().getName();
+                printBeautifully(3, dataMap);
             }
         } catch (ClassNotFoundException e) {
             System.out.printf("%s\n\n", e);
@@ -76,16 +76,17 @@ class ReflectionUtil {
 
     public void printClassConstructors(String fullClassName) {
         final String[] headers = {"Constructor", "Modifier", "Parameter Types"};
-        var data = new String[headers.length];
+        var dataMap = new String[2][headers.length];
+        dataMap[0] = headers;
         try {
             var reflectedClass = Class.forName(fullClassName);
             var declaredConstructors = reflectedClass.getDeclaredConstructors();
             for (int i = 0; i < declaredConstructors.length; i++) {
-                data[0] = Integer.toString(i);
-                data[1] = Modifier.toString(declaredConstructors[i].getModifiers());
+                dataMap[1][0] = Integer.toString(i);
+                dataMap[1][1] = Modifier.toString(declaredConstructors[i].getModifiers());
                 Object[] parameterTypes = declaredConstructors[i].getParameterTypes();
-                data[2] = arrayToString(parameterTypes);
-                printBeautifully(3, headers, data);
+                dataMap[1][2] = arrayToString(parameterTypes);
+                printBeautifully(3, dataMap);
             }
         } catch (ClassNotFoundException e) {
             System.out.printf("%s\n\n", e);
