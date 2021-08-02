@@ -19,11 +19,17 @@ public class BankApiV3 {
 	public static void main(String[] args) {
 			BankApiV3 bankApi = new BankApiV3();
 			Optional<String> result = bankApi.getClientFullName("sds", 1L);
+
 			if (result.isEmpty()) {
 				System.out.println("Client not found");
 			} else {
 				System.out.println("Client full name " + result.get());
 			}
+
+			if (result.isPresent()) {
+				System.out.println("Client full name " + result.get());
+			}
+
 	}
 
 }
