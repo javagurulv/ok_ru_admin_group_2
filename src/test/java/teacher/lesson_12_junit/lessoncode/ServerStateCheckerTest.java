@@ -38,7 +38,7 @@ public class ServerStateCheckerTest {
 
 	@Test
 	public void test1() {
-
+		checker.check(serverState);
 	}
 
 	@Test
