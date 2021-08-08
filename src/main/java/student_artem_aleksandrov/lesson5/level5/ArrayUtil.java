@@ -1,4 +1,4 @@
-package student_artem_aleksandrov.lesson5.level1.level5;
+package student_artem_aleksandrov.lesson5.level5;
 
 /*
 Создайте класс ArrayUtil.

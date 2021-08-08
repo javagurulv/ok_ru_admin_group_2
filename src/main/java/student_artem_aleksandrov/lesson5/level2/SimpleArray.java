@@ -1,4 +1,4 @@
-package student_artem_aleksandrov.lesson5.level1.level2;
+package student_artem_aleksandrov.lesson5.level2;
 /*
 Напишите программу, в которой:
  - создайте массив целых чисел длиной 3,

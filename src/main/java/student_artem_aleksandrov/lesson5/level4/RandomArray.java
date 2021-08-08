@@ -1,4 +1,4 @@
-package student_artem_aleksandrov.lesson5.level1.level4;
+package student_artem_aleksandrov.lesson5.level4;
 
 import java.util.ArrayList;
 import java.util.Arrays;
