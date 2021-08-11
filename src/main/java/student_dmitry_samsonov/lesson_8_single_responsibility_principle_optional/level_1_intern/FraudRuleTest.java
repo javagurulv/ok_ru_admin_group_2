@@ -13,7 +13,10 @@ class FraudRuleTest {
     }
 
     public void testRule(FraudRule rule, String fullName, String city, String country, int amount, boolean expectedResult) {
-        Trader trader = new Trader(fullName, city, country);
+        Trader trader = new Trader.Builder(fullName)
+                .withCity(city)
+                .withCountry(country)
+                .build();
         Transaction transaction = new Transaction(trader, amount);
         printTestResult(rule.getRuleName(), rule.isFraud(transaction).isFraud() == expectedResult);
     }

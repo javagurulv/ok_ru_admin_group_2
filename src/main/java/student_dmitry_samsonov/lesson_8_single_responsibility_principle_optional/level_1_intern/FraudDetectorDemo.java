@@ -9,7 +9,10 @@ class FraudDetectorDemo {
         FraudRule5 fraudRule5 = new FraudRule5();
         FraudRule[] fraudRules = {fraudRule1, fraudRule2, fraudRule3, fraudRule4, fraudRule5};
         FraudDetector fraudDetector = new FraudDetector(fraudRules);
-        Trader trader = new Trader("Pokemon", "City", "Country");
+        Trader trader = new Trader.Builder("Pokemon")
+                .withCity("City")
+                .withCountry("Country")
+                .build();
         Transaction transaction = new Transaction(trader, 1);
         fraudDetector.isFraud(transaction);
     }
