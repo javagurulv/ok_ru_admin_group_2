@@ -1,4 +1,4 @@
-package student_dmitry_samsonov.lesson_8.level_3_junior;
+package student_dmitry_samsonov.lesson_8_objects_equality_reflection.level_3_junior;
 
 import teacher.codereview.CodeReview;
 import teacher.codereview.CodeReviewComment;
@@ -8,7 +8,7 @@ import teacher.codereview.CodeReviewComment;
         "поэтому я и не стал его писать, а ошибки компиляции это не даёт." +
         "Правда в интернетах пишут что преимущество его наличия в том, что в IDE становится удобно навигировать в " +
         "конструктор родительского класса, так что есть стимул для явного прописывания.")
-public class SuperClassConstructorInvoker {
+class SuperClassConstructorInvoker {
     public SuperClassConstructorInvoker() {
         super();
         System.out.println(1);
