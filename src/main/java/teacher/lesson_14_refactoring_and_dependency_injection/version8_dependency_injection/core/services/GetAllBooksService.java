@@ -1,0 +1,22 @@
+package teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.core.services;
+
+import java.util.List;
+
+import teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.Book;
+import teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.core.database.Database;
+import teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.core.requests.GetAllBooksRequest;
+import teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.core.responses.GetAllBooksResponse;
+import teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.dependency_injection.DIComponent;
+import teacher.lesson_14_refactoring_and_dependency_injection.version8_dependency_injection.dependency_injection.DIDependency;
+
+@DIComponent
+public class GetAllBooksService {
+
+	@DIDependency private Database database;
+
+	public GetAllBooksResponse execute(GetAllBooksRequest request) {
+		List<Book> books = database.getAllBooks();
+		return new GetAllBooksResponse(books);
+	}
+
+}

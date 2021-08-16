@@ -6,12 +6,7 @@ class Trader {
     private String city;
     private String country;
 
-
-    public Trader(String fullName, String city, String country) {
-        this.fullName = fullName;
-        this.city = city;
-        this.country = country;
-    }
+    private Trader() {}
 
     public String getCity() {
         return city;
@@ -28,5 +23,33 @@ class Trader {
     @Override
     public String toString() {
         return "Name: " + this.getFullName() + ", City: " + this.getCity() + ", Country: " + this.getCountry();
+    }
+
+    public static class Builder {
+        private final String fullName;
+        private String city;
+        private String country;
+
+        public Builder(String fullName){
+            this.fullName = fullName;
+        }
+
+        public Builder withCity(String city) {
+            this.city = city;
+            return this;
+        }
+
+        public Builder withCountry(String country) {
+            this.country = country;
+            return this;
+        }
+
+        public Trader build(){
+            Trader trader = new Trader();
+            trader.fullName = this.fullName;
+            trader.city = this.city;
+            trader.country = this.country;
+            return trader;
+        }
     }
 }
