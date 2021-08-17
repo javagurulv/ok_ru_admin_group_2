@@ -1,6 +1,7 @@
 package student_artem_aleksandrov.lesson6.level5;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class TicTacToe {
 
@@ -11,7 +12,7 @@ public class TicTacToe {
         TicTacToe game = new TicTacToe(3);
 
         System.out.println("Game started with fieldDimension = %d".formatted(game.fieldDimension));
-        game.printField();
+        game.play();
 
     }
 
@@ -57,19 +58,35 @@ public class TicTacToe {
         return true;
     }
 
-    void printField() {
-        for (int[] line: this.field) {
-            var lineString = new StringBuilder();
-            for (int value: line) {
-                switch (value) {
-                    case -1 -> lineString.append(". ");
-                    case 0 -> lineString.append("x ");
-                    case 1 -> lineString.append("o ");
-                }
-            }
-            System.out.println(lineString);
+    private boolean checkIfPositionIsUsed(int x, int y) {
+        if (this.field[x][y] == -1) {
+            return false;
         }
+        return true;
     }
+
+    public void printFieldToConsole() {
+        String line = "\n-------------";
+        String nl = "\n|";
+
+        System.out.printf(line);
+        for (int i = 0; i < field.length; i++) {
+            System.out.printf(nl);
+            for (int j = 0; j < field[i].length; j++) {
+                String val = switch (field[i][j]) {
+                    case 0 -> "0";
+                    case 1 -> "X";
+                    case -1 -> " ";
+                    default -> "!";
+                };
+                System.out.printf(" %s |", val);
+            }
+            System.out.printf(line);
+        }
+
+        System.out.println();
+    }
+
 
     public boolean isWinPositionForHorizontals(int[][] field, int playerToCheck) {
         for (int[] row:field) {
@@ -150,6 +167,55 @@ public class TicTacToe {
             return true;
         }
         return false;
+    }
+
+    public Move getNextMove() {
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Write X:");
+            int x = scanner.nextInt();
+
+            System.out.println("Write Y:");
+            int y = scanner.nextInt();
+
+            Move move = new Move(x, y);
+            if (!checkIfPositionIsUsed(x, y)) {
+                return move;
+            } else {
+                System.out.println("This position is already used");
+            }
+        }
+    }
+
+    public void play() {
+        while(true) {
+            printFieldToConsole();
+            Move move0 = getNextMove();
+            field[move0.getX()][move0.getY()] = 0;
+
+            if (isWinPosition(field, 0)) {
+                System.out.println("Player 0 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+
+            printFieldToConsole();
+            Move move1 = getNextMove();
+            field[move1.getX()][move1.getY()] = 1;
+
+            if (isWinPosition(field, 1)) {
+                System.out.println("Player 1 WIN!");
+                break;
+            }
+            if (isDrawPosition(field)) {
+                System.out.println("DRAW!");
+                break;
+            }
+        }
     }
 
 }
