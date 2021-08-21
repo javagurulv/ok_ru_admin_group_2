@@ -1,6 +1,5 @@
 package student_artem_aleksandrov.lesson7.level7.library;
 
-import student_artem_aleksandrov.lesson7.level7.library.extensions.BookNotAvailable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,40 +24,45 @@ public class Library {
 
     private List<Book> booksInLibrary = new ArrayList<>();
     private List<Book> booksOnHands = new ArrayList<>();
-    private List<Book> booksReserved = new ArrayList<>();
     private List<Member> members = new ArrayList<>();
 
     public boolean isBookInLibrary(Book book) {
         return booksInLibrary.contains(book);
     }
 
-    public boolean isBookOnHands(Book book) {
-        return booksOnHands.contains(book);
+    public boolean isBookNotReserved(Book book, Member member) {
+        return book.getReserverdBy() == null || book.getReserverdBy() == member;
     }
 
-    public boolean isBookReserved(Book book) {
-        return booksOnHands.contains(book);
+    public boolean isBookAvailable(Book book, Member member) {
+        return isBookInLibrary(book) && isBookNotReserved(book, member);
     }
 
-    private void giveBook(Book book) {
-        booksInLibrary.remove(book);
-        booksOnHands.add(book);
-    }
+    private void giveBook(Book book, Member member) {
+        if (isBookAvailable(book, member)) {
+            booksInLibrary.remove(book);
+            member.takeBook(book);
+            booksOnHands.add(book);
 
-    public void takeBook(Book book) throws BookNotAvailable {
-        if (isBookInLibrary(book) && !isBookReserved(book)) {
-            giveBook(book);
-        } else {
-            throw new BookNotAvailable();
         }
     }
 
-    public void returnBook(Book book) {
+    public void returnBook(Book book, Member member) {
         booksOnHands.remove(book);
+        member.returnBook(book);
         booksInLibrary.add(book);
+    }
+
+    public void reserveBook(Book book, Member member) {
+        book.setReserverdBy(member);
     }
 
     public void addMember(Member member) {
         members.add(member);
     }
+
+    public void addBook(Book book) {
+        booksInLibrary.add(book);
+    }
+
 }
