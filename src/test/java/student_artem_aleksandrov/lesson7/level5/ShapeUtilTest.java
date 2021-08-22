@@ -14,7 +14,6 @@ public class ShapeUtilTest extends TestCase {
         Shape[] shapes = new Shape[2];
         shapes[0] = new Circle(4);
         shapes[1] = new Square(4);
-        System.out.println(shapeUtil.calculateArea(shapes));
         assertEquals(shapeUtil.calculateArea(shapes), 66.26, 0.01);
     }
 
