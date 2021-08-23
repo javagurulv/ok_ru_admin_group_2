@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import teacher.lesson_15_spring_basics.core.domain.Book;
 
-@Component
+//@Component
 public class InMemoryDatabaseImpl implements Database {
 
 	private Long nextId = 1L;
