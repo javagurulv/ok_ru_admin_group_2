@@ -11,6 +11,7 @@ import teacher.lesson_15_spring_basics.console_ui.ExitUIAction;
 import teacher.lesson_15_spring_basics.console_ui.GetAllBooksUIAction;
 import teacher.lesson_15_spring_basics.console_ui.RemoveBookUIAction;
 import teacher.lesson_15_spring_basics.console_ui.SearchBooksUIAction;
+import teacher.lesson_15_spring_basics.core.database.Database;
 
 public class BookListApplication {
 
@@ -43,6 +44,9 @@ public class BookListApplication {
 	}
 
 	private static void executeSelectedMenuItem(int selectedMenu) {
+		Database db = applicationContext.getBean(Database.class);
+
+
 		switch (selectedMenu) {
 			case 1: {
 				AddBookUIAction uiAction = applicationContext.getBean(AddBookUIAction.class);
