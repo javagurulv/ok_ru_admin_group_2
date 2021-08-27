@@ -1,4 +1,6 @@
-package student_alexander_fateev.lesson6.level_5.task22;
+package student_alexander_fateev.lesson6.level_5_6.task22_30;
+
+import java.util.Arrays;
 
 class TicTacToeTest {
     public static void main(String[] args) {
@@ -103,8 +105,11 @@ class TicTacToeTest {
         field = new int[][]{{1, 0, 1},
                             {-1, 1, 0},
                             {0, 1, -1}};
-
+        System.out.println("Create empty field: OK");
         test.drawTest(expectedResult, field, msg);
+
+        // Test case 15: Create empty field - true
+        test.emptyFieldTest();
 
     }
 
@@ -240,4 +245,19 @@ class TicTacToeTest {
         }
     }
 
+    void emptyFieldTest() {
+        int [][] expectedResult = {{-1,-1,-1},
+                                   {-1,-1,-1},
+                                   {-1,-1,-1}};
+
+        TicTacToe game = new TicTacToe();
+        int [][] result = game.createField();
+
+        if (Arrays.deepEquals(result, expectedResult)) {
+            System.out.println("Create empty field: OK");
+        }
+        else {
+            System.out.println("Create empty field: FAIL");
+        }
+    }
 }
