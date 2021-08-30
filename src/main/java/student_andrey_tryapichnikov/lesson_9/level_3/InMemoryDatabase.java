@@ -16,7 +16,10 @@ public class InMemoryDatabase implements ProductDatabase{
     public Optional<Product> findByTitle(String productTitle) {
         Product result = null;
         for (Product i: products) {
-            if (productTitle.equals(i.getTitle())) result = i;
+            if (productTitle.equals(i.getTitle())) {
+                result = i;
+                break;
+            }
         }
         return Optional.ofNullable(result);
     }
