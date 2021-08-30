@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import teacher.lesson_15_spring_basics.core.domain.Book;
 
-@Component
+//@Component
 public class RealDatabase implements Database {
 	@Override
 	public void save(Book book) {
