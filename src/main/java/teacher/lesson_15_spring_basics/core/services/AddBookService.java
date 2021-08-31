@@ -3,6 +3,7 @@ package teacher.lesson_15_spring_basics.core.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import teacher.lesson_15_spring_basics.core.database.Database;

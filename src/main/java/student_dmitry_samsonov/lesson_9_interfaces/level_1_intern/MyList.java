@@ -1,5 +1,7 @@
 package student_dmitry_samsonov.lesson_9_interfaces.level_1_intern;
 
+import jdk.jshell.spi.ExecutionControl;
+
 interface MyList {
     public void add(Object obj);
     // Создаёт новый массив длинной старый массив плюс 1, присваивает каждому элементу значение элемента с таким же
@@ -12,14 +14,14 @@ interface MyList {
     // Так же как предыдущий, но equals сравнивает с каждым элементом массива obj
     public void replace(Object oldObj, Object newObj);
     // Итерируется по массиву, если текущий элемент equals oldObj, то присвоить на его место newObj
-    public void sort();
+    public void sort() throws ExecutionControl.NotImplementedException;
     // Выполняет сортировки массива
     public Integer size();
     // Возвращает длинну массива
-    public Boolean isEmpty();
+    public boolean isEmpty();
     // Возвращает true, если size() equals 0
     public Object get(Integer index);
     // Возвращает объект с индексом index
-    public Boolean contains(Object obj);
+    public boolean contains(Object obj);
     // Итерируется по массиву, проверяет equals каждого элемента с obj, возвращает true при первом совпадении
 }
