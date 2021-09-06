@@ -72,7 +72,7 @@ public class BookListApplication {
 				uiAction.execute();
 				break;
 			} default: {
-				logger.error(String.format("Not existing (%s) menu item was entered", selectedMenu));
+				logger.debug(String.format("Not existing (%s) menu item was entered", selectedMenu));
 			}
 		}
 	}
