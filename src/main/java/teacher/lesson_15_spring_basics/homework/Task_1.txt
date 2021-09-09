@@ -1,0 +1,13 @@
+Написать консольное приложение с использованием Spring Framework.
+Продемонстрировать использование:
+@Component
+@Autowired
+@Value
+@Qualifier
+
+
+Продемонстрировать использование следующих вариантов
+получения зависимостей:
+Constructor Injection
+Setter injection
+Field injection

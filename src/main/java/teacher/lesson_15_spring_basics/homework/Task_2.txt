@@ -1,0 +1,34 @@
+A bit of theory - Constructor Injection
+
+Advantages of constructor injection
+- Constructed object is immutable and returned to the client in a fully initialized state.
+- An issue with a growing amount of dependencies is immediately visible with this approach. More dependencies bigger the constructor.
+- Can be combined with setter injection or field injection, constructor parameters indicate required dependencies, others — optional.
+
+Disadvantages
+- No possibility to change object’s dependencies later — inflexibility.
+- Higher chance to have circular dependencies, so-called chicken-and-egg scenario.
+
+------------------------------------------------------------------
+
+A bit of theory - Setter injection
+
+Advantages
+- Flexibility in dependency resolution or object reconfiguration, it can be done anytime. Plus, this freedom solves the circular dependency issue of constructor injection.
+
+Disadvantages
+- Null checks are required, because dependencies may not be set at the moment.
+- Potentially more error-prone and less secure than constructor injection due to the possibility of overriding dependencies.
+
+------------------------------------------------------------------
+
+A bit of theory - Field injection
+
+Advantages
+- Easy to use, no constructors or setters required
+- Can be easily combined with the constructor and/or setter approach
+
+Disadvantages
+- Less control over object instantiation. In order to instantiate the object of a class for a test, you will need either a Spring container configured or mock library — depends on the test you are writing.
+- A number of dependencies can reach dozens until you notice that something went wrong in your design.
+- No immutability — the same as for setter injection.
