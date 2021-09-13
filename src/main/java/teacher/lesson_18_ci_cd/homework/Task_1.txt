@@ -1,0 +1,14 @@
+Создайте простой Java проект с продакшен и тестовым кодом.
+Напишите для него build скрипт на Apache Ant.
+Зависимости от JUnit подтяните с помощью Apache Ivy.
+
+За пример можно взять вот эти две статьи:
+
+A simple Ant script for a project with a target JAR file and JUnit tests
+https://emptyhammock.com/blog/simple-ant-script-for-jar-file-build-with-tests.html
+
+Download dependencies with Ant and Ivy
+https://emptyhammock.com/blog/download-dependencies-with-ant-and-ivy.html
+
+Получившийся проект упакуйте в архив и поместите к качестве файла
+с решением к этой лекции.
