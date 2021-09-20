@@ -1,9 +1,11 @@
 package student_andrey_domas.lesson16.random_list;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import java.util.Random;
 
+@Ignore
 public class RunMe {
 
     private Random rnd = new Random();

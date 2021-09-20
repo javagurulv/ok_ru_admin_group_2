@@ -1,7 +1,9 @@
 package student_artem_aleksandrov.lesson8.level7;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
+@Ignore
 public class SomeTestClass {
 
     String var = "Value";
