@@ -22,6 +22,6 @@ class Apple {
     public boolean equals(Object obj) {
 
         Apple apple = (Apple) obj;
-        return (super.equals(obj) && apple.color.equals(this.color) && apple.weight == this.weight);
+        return super.equals(obj) || (apple.color.equals(this.color) && apple.weight == this.weight);
     }
 }
