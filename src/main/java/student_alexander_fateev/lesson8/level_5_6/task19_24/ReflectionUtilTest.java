@@ -1,4 +1,4 @@
-package student_alexander_fateev.lesson8.level_5.task19_20;
+package student_alexander_fateev.lesson8.level_5_6.task19_24;
 
 class ReflectionUtilTest {
     public static void main(String[] args) throws ClassNotFoundException {
@@ -12,7 +12,7 @@ class ReflectionUtilTest {
         String expectedResult = "public";
 
         ReflectionUtil test = new ReflectionUtil();
-        String result = test.getClassAccessModifier("student_alexander_fateev.lesson8.level_5.task19_20.DemoClassPublic");
+        String result = test.getClassAccessModifier("student_alexander_fateev.lesson8.level_5_6.task19_24.DemoClassPublic");
 
         if (result.equals(expectedResult)) {
             System.out.println("Public modifier: OK");
@@ -26,7 +26,7 @@ class ReflectionUtilTest {
         String expectedResult = "";
 
         ReflectionUtil test = new ReflectionUtil();
-        String result = test.getClassAccessModifier("student_alexander_fateev.lesson8.level_5.task19_20.DemoClassDefault");
+        String result = test.getClassAccessModifier("student_alexander_fateev.lesson8.level_5_6.task19_24.DemoClassDefault");
 
         if (result.equals(expectedResult)) {
             System.out.println("Default modifier: OK");
@@ -37,10 +37,10 @@ class ReflectionUtilTest {
     }
 
     void testSuper() throws ClassNotFoundException {
-        String expectedResult = "student_alexander_fateev.lesson8.level_5.task19_20.DemoClassParent";
+        String expectedResult = "student_alexander_fateev.lesson8.level_5_6.task19_24.DemoClassParent";
 
         ReflectionUtil test = new ReflectionUtil();
-        String result = test.getSuperClassName("student_alexander_fateev.lesson8.level_5.task19_20.DemoClassChild");
+        String result = test.getSuperClassName("student_alexander_fateev.lesson8.level_5_6.task19_24.DemoClassChild");
 
         if (result.equals(expectedResult)) {
             System.out.println("Get parent class: OK");
