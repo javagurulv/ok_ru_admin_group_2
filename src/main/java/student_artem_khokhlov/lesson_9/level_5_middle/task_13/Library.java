@@ -1,7 +1,6 @@
 package student_artem_khokhlov.lesson_9.level_5_middle.task_13;
 
 import java.util.HashSet;
-import java.util.LinkedList;
 
 public class Library {
     HashSet<Book> books;
