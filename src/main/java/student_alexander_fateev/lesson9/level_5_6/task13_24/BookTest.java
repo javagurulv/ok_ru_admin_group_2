@@ -1,4 +1,4 @@
-package student_alexander_fateev.lesson9.level_5.task13;
+package student_alexander_fateev.lesson9.level_5_6.task13_24;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,14 @@ class BookTest {
         test.testListBooks(bookLibrary);
         test.testFindBookByAuthor(bookLibrary);
         test.testFindBookByAuthorStartWith(bookLibrary);
+        test.testFindBookByTitle(bookLibrary);
+        test.testFindBookByTitleStartWith(bookLibrary);
+        test.testMarkAsReadExistingBook(bookLibrary);
+        test.testMarkAsReadNonExistingBook(bookLibrary);
+        test.testMarkAsUnReadExistingBook(bookLibrary);
+        test.testMarkAsUnReadNonExistingBook(bookLibrary);
+        test.testAllReadBooks(bookLibrary);
+        test.testAllUnreadBooks(bookLibrary);
     }
 
     void testAddExistingBook(List<Object> bookLibrary) {
@@ -46,7 +54,7 @@ class BookTest {
 
         BookReaderImpl book = new BookReaderImpl();
         book.setBookAuthor("Lermontov");
-        book.setBookTitle("Some book 2");
+        book.setBookTitle("New book 2");
 
         boolean result = book.addNewBook(bookLibrary);
         printMessage(message,result,expectedResult);
@@ -127,7 +135,7 @@ class BookTest {
         ArrayList<String> result = book.listAllBooks(bookLibrary);
 
         if (result.contains("Some book 1 [Tolstoy]")
-                && result.contains("Some book 2 [Lermontov]")) {
+                && result.contains("New book 2 [Lermontov]")) {
             System.out.println("List all books: OK");
         }
         else {
@@ -138,12 +146,12 @@ class BookTest {
     void testFindBookByAuthor(List<Object> bookLibrary) {
         BookReaderImpl book = new BookReaderImpl();
         book.setBookAuthor("Lermontov");
-        book.setBookTitle("Some new book");
+        book.setBookTitle("Another new book");
         book.addNewBook(bookLibrary);
 
         ArrayList<String> result = book.findBookByAuthor(bookLibrary, "Lermontov");
-        if (result.contains("Some book 2 [Lermontov]")
-                && result.contains("Some new book [Lermontov]")) {
+        if (result.contains("New book 2 [Lermontov]")
+                && result.contains("Another new book [Lermontov]")) {
             System.out.println("List books by author: OK");
         }
         else {
@@ -154,17 +162,114 @@ class BookTest {
     void testFindBookByAuthorStartWith(List<Object> bookLibrary) {
         BookReaderImpl book = new BookReaderImpl();
         book.setBookAuthor("Lermann");
-        book.setBookTitle("Some cool book");
+        book.setBookTitle("Cool book");
         book.addNewBook(bookLibrary);
 
         ArrayList<String> result = book.findBookByAuthor(bookLibrary, "Ler");
-        if (result.contains("Some book 2 [Lermontov]")
-                && result.contains("Some new book [Lermontov]")
-                && result.contains("Some cool book [Lermann]")) {
+        if (result.contains("New book 2 [Lermontov]")
+                && result.contains("Another new book [Lermontov]")
+                && result.contains("Cool book [Lermann]")) {
             System.out.println("List books by author [start with]: OK");
         }
         else {
             System.out.println("List books by author [start with]: FAIL");
+        }
+    }
+
+    void testFindBookByTitle(List<Object> bookLibrary) {
+        BookReaderImpl book = new BookReaderImpl();
+        ArrayList<String> result = book.findBookByTitle(bookLibrary, "Some book 1");
+
+        if (result.contains("Some book 1 [Tolstoy]")) {
+            System.out.println("List books by title: OK");
+        }
+        else {
+            System.out.println("List books by title: FAIL");
+        }
+    }
+
+    void testFindBookByTitleStartWith(List<Object> bookLibrary) {
+        BookReaderImpl book = new BookReaderImpl();
+        ArrayList<String> result = book.findBookByTitle(bookLibrary, "Cool");
+
+        if (result.contains("Cool book [Lermann]")) {
+            System.out.println("List books by title [start with]: OK");
+        }
+        else {
+            System.out.println("List books by title [start with]: FAIL");
+        }
+    }
+
+    void testMarkAsReadExistingBook(List<Object> bookLibrary) {
+        boolean expectedResult = true;
+        String message = "Mark as read existing book";
+        BookReaderImpl book = new BookReaderImpl();
+        book.setBookTitle("Cool book");
+        book.setBookAuthor("Lermann");
+
+        boolean result = book.markRead(bookLibrary);
+        printMessage(message,result,expectedResult);
+    }
+
+    void testMarkAsReadNonExistingBook(List<Object> bookLibrary) {
+        boolean expectedResult = false;
+        String message = "Mark as read non existing book";
+        BookReaderImpl book = new BookReaderImpl();
+        book.setBookTitle("Buratina");
+        book.setBookAuthor("Pushkin");
+
+        boolean result = book.markRead(bookLibrary);
+        printMessage(message,result,expectedResult);
+    }
+
+    void testMarkAsUnReadExistingBook(List<Object> bookLibrary) {
+        boolean expectedResult = true;
+        String message = "Mark as unread existing book";
+        BookReaderImpl book = new BookReaderImpl();
+        book.setBookTitle("Cool book");
+        book.setBookAuthor("Lermann");
+
+        boolean result = book.markUnread(bookLibrary);
+        printMessage(message,result,expectedResult);
+    }
+
+    void testMarkAsUnReadNonExistingBook(List<Object> bookLibrary) {
+        boolean expectedResult = false;
+        String message = "Mark as unread non existing book";
+        BookReaderImpl book = new BookReaderImpl();
+        book.setBookTitle("Buratina");
+        book.setBookAuthor("Pushkin");
+
+        boolean result = book.markUnread(bookLibrary);
+        printMessage(message,result,expectedResult);
+    }
+
+    void testAllReadBooks(List<Object> bookLibrary) {
+        BookReaderImpl book = new BookReaderImpl();
+        book.setBookAuthor("Lermontov");
+        book.setBookTitle("New book 2");
+        book.markRead(bookLibrary);
+
+        ArrayList<String> result = book.findAllReadBooks(bookLibrary);
+        if (result.contains("New book 2 [Lermontov]")) {
+            System.out.println("List all read books: OK");
+        }
+        else {
+            System.out.println("List all read books: FAIL");
+        }
+    }
+
+    void testAllUnreadBooks(List<Object> bookLibrary) {
+        BookReaderImpl book = new BookReaderImpl();
+
+        ArrayList<String> result = book.findAllUnreadBooks(bookLibrary);
+        if (result.contains("Some book 1 [Tolstoy]")
+                && result.contains("Another new book [Lermontov]")
+                && result.contains("Cool book [Lermann]")) {
+            System.out.println("List all unread books: OK");
+        }
+        else {
+            System.out.println("List all unread books: FAIL");
         }
     }
 
