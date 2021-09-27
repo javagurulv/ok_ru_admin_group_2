@@ -1,14 +1,23 @@
 package student_dmitry_samsonov.lesson_12_junit.level_3_junior;
 
+import org.apache.log4j.Logger;
+
 import java.util.Arrays;
+import java.util.Formatter;
 
 class GameOfLifeNextGenerationCalculator {
+    private static Logger logger = Logger.getLogger(GameOfLife.class);
+    private static Formatter formatter = new Formatter();
 
     public boolean[][] calculate(boolean[][] currentGeneration) {
         //Правило 1:
         //Любая живая клетка с меньше чем двумя живыми соседями умирает в следующем поколении.
         // Правило 2:
         //Любая живая клетка с больше чем тремя живыми соседями умирает в следующем поколении.
+        //Правило 3:
+        //Любая живая клетка с двумя или тремя живыми соседями остаётся живой в следующем поколении.
+        //Правило 4:
+        //Любая мёртвая клетка с тремя живыми соседями становится живой в следующем поколении.
         boolean[][] nextGeneration = Arrays.stream(currentGeneration).map(boolean[]::clone).toArray(boolean[][]::new);
         int y_MAX = currentGeneration.length - 1;
         int x_MAX = currentGeneration[0].length - 1;
@@ -17,12 +26,17 @@ class GameOfLifeNextGenerationCalculator {
             for (int x=0; x<=x_MAX; x++) {
                 aliveNeighbours = countNeighboursOfType(currentGeneration, y, x, true);
                 if (currentGeneration[y][x]) {
-                    if (aliveNeighbours < 2 || aliveNeighbours > 3) {
+                    if (aliveNeighbours < 2) {
                         nextGeneration[y][x] = false;
+                        logger.debug(formatter.format("Killing rule 1: row=%s, col=%s\n", y, x));
+                    } else if (aliveNeighbours > 3){
+                        nextGeneration[y][x] = false;
+                        logger.debug(formatter.format("Killing rule 2: row=%s, col=%s\n", y, x));
                     }
                 } else {
                     if (aliveNeighbours == 3) {
                         nextGeneration[y][x] = true;
+                        logger.debug(formatter.format("Resurrecting rule 4: row=%s, col=%s\n", y, x));
                     }
                 }
             }
