@@ -10,3 +10,6 @@
 /.out/
 /out/
 /target/
+
+# Ivy library
+/lib
