@@ -6,6 +6,7 @@ class Book {
     private Long id;
     private String title;
     private String author;
+    private String yearOfIssue;
 
     Book(String author, String title) {
         this.author = author;
@@ -14,6 +15,10 @@ class Book {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setYearOfIssue(String yearOfIssue) {
+        this.yearOfIssue = yearOfIssue;
     }
 
     public Long getId() {
@@ -26,6 +31,10 @@ class Book {
 
     public String getAuthor() {
         return this.author;
+    }
+
+    public String getYearOfIssue() {
+        return this.yearOfIssue;
     }
 
     @Override

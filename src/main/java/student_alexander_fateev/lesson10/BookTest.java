@@ -1,6 +1,7 @@
 package student_alexander_fateev.lesson10;
 
 import java.util.List;
+import java.util.Objects;
 
 class BookTest {
     public static void main(String[] args) {
@@ -26,6 +27,24 @@ class BookTest {
         test.testDeleteByAuthor();
 
         test.testDeleteByTitle();
+
+        test.testMatchAuthor();
+        test.testMatchIncorrectAuthor();
+
+        test.testMatchTitle();
+        test.testMatchIncorrectTitle();
+
+        test.testMatchYearOfIssue();
+        test.testMatchIncorrectYearOfIssue();
+
+        test.testAndSearch();
+        test.testIncorrectAndSearch();
+
+        test.testOrSearchLeft();
+        test.testOrSearchRight();
+        test.testOrSearchIncorrect();
+
+        test.testListBooksByCriteria();
 
     }
 
@@ -226,6 +245,158 @@ class BookTest {
         }
         else {
             System.out.println("Delete book by title: FAIL");
+        }
+    }
+
+    void testMatchAuthor() {
+        boolean expectedResult = true;
+        String message = "Match author";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Pushkin");
+        Book book = new Book("Pushkin", "Buratina");
+
+        boolean result = author.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testMatchIncorrectAuthor() {
+        boolean expectedResult = false;
+        String message = "Match incorrect author";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Ushkin");
+        Book book = new Book("Pushkin", "Buratina");
+
+        boolean result = author.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testMatchTitle() {
+        boolean expectedResult = true;
+        String message = "Match title";
+
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratina");
+        Book book = new Book("Pushkin", "Buratina");
+
+        boolean result = title.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testMatchIncorrectTitle() {
+        boolean expectedResult = false;
+        String message = "Match incorrect title";
+
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratinka");
+        Book book = new Book("Pushkin", "Buratina");
+
+        boolean result = title.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testMatchYearOfIssue() {
+        boolean expectedResult = true;
+        String message = "Match year of issue";
+
+        YearOfIssueSearchCriteria year = new YearOfIssueSearchCriteria("2001");
+        Book book = new Book("Pushkin", "Buratina");
+        book.setYearOfIssue("2001");
+
+        boolean result = year.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testMatchIncorrectYearOfIssue() {
+        boolean expectedResult = false;
+        String message = "Match incorrect year of issue";
+
+        YearOfIssueSearchCriteria year = new YearOfIssueSearchCriteria("2001");
+        Book book = new Book("Pushkin", "Buratina");
+        book.setYearOfIssue("2010");
+
+        boolean result = year.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testAndSearch() {
+        boolean expectedResult = true;
+        String message = "Match left and right conditions";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Pushkin");
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratina");
+        Book book = new Book("Pushkin", "Buratina");
+
+        AndSearchCriteria fields = new AndSearchCriteria(author, title);
+        boolean result = fields.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testIncorrectAndSearch() {
+        boolean expectedResult = false;
+        String message = "Match left and right conditions";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Pushkin");
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratina");
+        Book book = new Book("Pushkin", "Buratinka");
+
+        AndSearchCriteria fields = new AndSearchCriteria(author, title);
+        boolean result = fields.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testOrSearchLeft() {
+        boolean expectedResult = true;
+        String message = "Match left OR right conditions (Left)";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Pushkin");
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratinka");
+        Book book = new Book("Pushkin", "Buratina");
+
+        OrSearchCriteria fields = new OrSearchCriteria(author, title);
+        boolean result = fields.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testOrSearchRight() {
+        boolean expectedResult = true;
+        String message = "Match left OR right conditions (Right)";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Pushkiin");
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratina");
+        Book book = new Book("Pushkin", "Buratina");
+
+        OrSearchCriteria fields = new OrSearchCriteria(author, title);
+        boolean result = fields.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testOrSearchIncorrect() {
+        boolean expectedResult = false;
+        String message = "Match left OR right conditions (both incorrect)";
+
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Pushkiin");
+        TitleSearchCriteria title = new TitleSearchCriteria("Buratinka");
+        Book book = new Book("Pushkin", "Buratina");
+
+        OrSearchCriteria fields = new OrSearchCriteria(author, title);
+        boolean result = fields.match(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testListBooksByCriteria() {
+        AuthorSearchCriteria author = new AuthorSearchCriteria("Lermontov");
+        TitleSearchCriteria title = new TitleSearchCriteria("SomeShit");
+        AndSearchCriteria fields = new AndSearchCriteria(author, title);
+
+        BookDatabaseImpl bookDB = getDB();
+
+        for (Book b: bookDB.find(fields)) {
+            if (b.getTitle().equals("SomeShit")
+                    && b.getAuthor().equals("Lermontov")) {
+                System.out.println("Test random search: OK");
+            }
+            else {
+                System.out.println("Test random search: FAIL");
+            }
+
         }
     }
 }
