@@ -1,8 +1,6 @@
 package student_alexander_fateev.lesson10;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 class BookTest {
     public static void main(String[] args) {
@@ -57,6 +55,10 @@ class BookTest {
         test.testContainsFalse();
 
         test.testFindUniqueWords();
+
+        test.testGetAuthorToBooksMap();
+
+        test.testGetEachAuthorBookCount();
 
     }
 
@@ -504,6 +506,62 @@ class BookTest {
         }
         else {
             System.out.println("Get unique words: FAIL");
+        }
+    }
+
+    void testGetAuthorToBooksMap() {
+        Map<String, List<Book>> expectedResult = new HashMap<>();
+
+        Book book = new Book("Pushkin", "Buratina");
+        book.setId(1L);
+
+        List<Book> pushkinBooks = new ArrayList<Book>();
+        pushkinBooks.add(book);
+        expectedResult.put("Pushkin", pushkinBooks);
+
+        Book book1 = new Book("Lermontov", "Hero");
+        book1.setId(2L);
+
+        Book book2 = new Book("Lermontov", "SomeShit");
+        book2.setId(3L);
+
+        List<Book> lermontovBooks = new ArrayList<Book>();
+        lermontovBooks.add(book1);
+        lermontovBooks.add(book2);
+        expectedResult.put("Lermontov", lermontovBooks);
+
+        Book book3 = new Book ("Tolstoy", "NewShit");
+        book3.setId(4L);
+
+        List<Book> tolstoyBooks = new ArrayList<Book>();
+        tolstoyBooks.add(book3);
+        expectedResult.put("Tolstoy", tolstoyBooks);
+
+        BookDatabaseImpl bookDB = getDB();
+        Map<String, List<Book>> booksByAuthor = bookDB.getAuthorToBooksMap();
+
+        if (booksByAuthor.equals(expectedResult)) {
+            System.out.println("Map author to books: OK");
+        }
+        else {
+            System.out.println("Map author to books: FAIL");
+        }
+    }
+
+    void testGetEachAuthorBookCount() {
+        Map<String, Integer> expectedResult = new HashMap<>();
+        expectedResult.put("Tolstoy", 1);
+        expectedResult.put("Lermontov", 2);
+        expectedResult.put("Pushkin", 1);
+
+        BookDatabaseImpl bookDB = getDB();
+        Map<String, Integer> booksNumber = bookDB.getEachAuthorBookCount();
+
+        if (booksNumber.equals(expectedResult)) {
+            System.out.println("Get book count by author: OK");
+        }
+        else {
+            System.out.println("Get book count by author: FAIL");
         }
     }
 }
