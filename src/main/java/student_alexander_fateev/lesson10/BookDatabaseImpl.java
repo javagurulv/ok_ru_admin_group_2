@@ -1,8 +1,6 @@
 package student_alexander_fateev.lesson10;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 class BookDatabaseImpl implements BookDatabase {
     private List<Object> bookLibrary = new ArrayList<Object>();
@@ -122,5 +120,46 @@ class BookDatabaseImpl implements BookDatabase {
         }
 
         return books;
+    }
+
+    @Override
+    public Set<String> findUniqueAuthors() {
+        HashSet<String> authors = new HashSet<>();
+        for (Object o: getBookLibrary()) {
+            Book book = (Book) o;
+            authors.add(book.getAuthor());
+        }
+
+        return authors;
+    }
+
+    @Override
+    public Set<String> findUniqueTitles() {
+        HashSet<String> titles = new HashSet<>();
+        for (Object o: getBookLibrary()) {
+            Book book = (Book) o;
+            titles.add(book.getTitle());
+        }
+
+        return titles;
+    }
+
+    @Override
+    public Set<Book> findUniqueBooks() {
+        HashSet<Book> books = new HashSet<>();
+        for (Object o: getBookLibrary()) {
+            Book book = (Book) o;
+            books.add(book);
+        }
+
+        return books;
+    }
+
+    @Override
+    public boolean contains(Book book) {
+        if (getBookLibrary().contains(book)) {
+            return true;
+        }
+        return false;
     }
 }

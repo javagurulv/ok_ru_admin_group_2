@@ -1,5 +1,6 @@
 package student_alexander_fateev.lesson10;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,6 +46,17 @@ class BookTest {
         test.testOrSearchIncorrect();
 
         test.testListBooksByCriteria();
+
+        test.testFindUniqueAuthors();
+
+        test.testFindUniqueTitles();
+
+        test.testFindUniqueBooks();
+
+        test.testContains();
+        test.testContainsFalse();
+
+        test.testFindUniqueWords();
 
     }
 
@@ -397,6 +409,101 @@ class BookTest {
                 System.out.println("Test random search: FAIL");
             }
 
+        }
+    }
+
+    void testFindUniqueAuthors() {
+        HashSet<String> expectedResult = new HashSet<>();
+        expectedResult.add("Tolstoy");
+        expectedResult.add("Lermontov");
+        expectedResult.add("Pushkin");
+        
+        BookDatabaseImpl bookDB = getDB();
+        HashSet<String> authors = (HashSet<String>) bookDB.findUniqueAuthors();
+
+        if (authors.equals(expectedResult)) {
+            System.out.println("Get all authors: OK");
+        }
+        else {
+            System.out.println("Get all authors: FAIL");
+        }
+    }
+
+    void testFindUniqueTitles() {
+        HashSet<String> expectedResult = new HashSet<>();
+        expectedResult.add("NewShit");
+        expectedResult.add("Buratina");
+        expectedResult.add("Hero");
+        expectedResult.add("SomeShit");
+
+        BookDatabaseImpl bookDB = getDB();
+        HashSet<String> titles = (HashSet<String>) bookDB.findUniqueTitles();
+
+        if (titles.equals(expectedResult)) {
+            System.out.println("Get all titles: OK");
+        }
+        else {
+            System.out.println("Get all titles: FAIL");
+        }
+    }
+
+    void testFindUniqueBooks() {
+        BookDatabaseImpl bookDB = getDB();
+        HashSet<Book> expectedResult = new HashSet<>();
+        for (Object o: bookDB.getBookLibrary()) {
+            Book book = (Book) o;
+            expectedResult.add(book);
+        }
+
+        HashSet<Book> books = (HashSet<Book>) bookDB.findUniqueBooks();
+        if (books.equals(expectedResult)) {
+            System.out.println("Get all unique books: OK");
+        }
+        else {
+            System.out.println("Get all unique books: FAIL");
+        }
+    }
+
+    void testContains() {
+        boolean expectedResult = true;
+        String message = "Test library contains book";
+
+        Book book = new Book("Pushkin", "Buratina");
+        book.setId(1L);
+
+        BookDatabaseImpl bookDB = getDB();
+        boolean result = bookDB.contains(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testContainsFalse() {
+        boolean expectedResult = false;
+        String message = "Test library contains book (no such book)";
+
+        Book book = new Book("Pushkin", "Buratinka");
+        book.setId(1L);
+
+        BookDatabaseImpl bookDB = getDB();
+        boolean result = bookDB.contains(book);
+        printMessage(message, result, expectedResult);
+    }
+
+    void testFindUniqueWords() {
+        HashSet<String> expectedResults = new HashSet<>();
+        expectedResults.add("one");
+        expectedResults.add("two");
+        expectedResults.add("three");
+        expectedResults.add("four");
+        expectedResults.add("five");
+
+        UniqueWordFinder words = new UniqueWordFinder();
+        HashSet<String> uniqueWords = (HashSet<String>) words.find("one two three one four three five");
+
+        if (expectedResults.equals(uniqueWords)) {
+            System.out.println("Get unique words: OK");
+        }
+        else {
+            System.out.println("Get unique words: FAIL");
         }
     }
 }
