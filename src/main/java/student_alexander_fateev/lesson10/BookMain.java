@@ -36,10 +36,31 @@ class BookMain {
         }
          */
 
-        System.out.println("----");
-        for (Object o: bookDB.findByAuthor("Lermontov!!!")) {
-            Book getBook = (Book) o;
-            System.out.println(getBook.getTitle() + " " + getBook.getAuthor());
+        //System.out.println("----");
+        //for (Object o: bookDB.findByAuthor("Lermontov!!!")) {
+        //    Book getBook = (Book) o;
+        //    System.out.println(getBook.getTitle() + " " + getBook.getAuthor());
+        //}
+
+        //SaveBookUIAction newBook = new SaveBookUIAction(bookDB);
+        //newBook.execute();
+
+        //for (Object o: bookDB.getBookLibrary()) {
+        //    Book listBook = (Book) o;
+        //    System.out.println(listBook.getTitle());
+        //}
+
+        //FindByIdUIAction findBook = new FindByIdUIAction(bookDB);
+        //findBook.execute();
+
+        //FindByAuthorUIAction findBook = new FindByAuthorUIAction(bookDB);
+        //FindByTitleUIAction findBook = new FindByTitleUIAction(bookDB);
+        DeleteByIdUIAction delBook = new DeleteByIdUIAction(bookDB);
+        delBook.execute();
+
+        for (Object o: bookDB.getBookLibrary()) {
+            Book b = (Book) o;
+            System.out.println(b.getTitle());
         }
     }
 }
