@@ -33,6 +33,16 @@ class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
+        /*
+        А надо ли вообще сравнивать тут id?
+        Выглядит как отличный способ выстрелить себе в ногу
+        и наплодить дубликатов. Понятно, что условие задачи
+        этого не требует, но всё равно непонятно, а смысл?
+
+        Не говоря уже о том, что если id книги в базе ключ
+        именованного массива, это сильно упрощает управление
+        записями.
+         */
         return id.equals(book.id) && title.equals(book.title) && author.equals(book.author);
     }
 
