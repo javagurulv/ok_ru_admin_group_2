@@ -1,7 +1,5 @@
 package student_alexander_zhukov.lesson_12.level_5;
 
-import student_dmitry_samsonov.lesson_5.level_2_intern.Array;
-
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
